@@ -1,0 +1,73 @@
+@Table(name = "Faculty_Personal_Info")
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+
+	@Column(name = "FirstName")
+	private String FirstName;
+
+	@Column(name = "LastName")
+	private String LastName;
+	
+	@Column(name = "DateOfBirth")
+	private Date DateOfBirth;
+
+	@Column(name = "Age")
+	private int Age;
+
+	@Column(name = "Gender")
+	private String Gender;
+
+	@Column(name = "NID")
+	private Long NID;
+	
+	@OneToOne
+	@JoinColumn(name = "PermanentAddress")
+	private int PermanentAddress;
+	
+	@OneToOne
+	@JoinColumn(name = "PresentAddress")
+	private int PresentAddress;
+	
+	@Column(name = "Cellphone")
+	private Long Cellphone;
+	
+	@Column(name = "Email")
+	private String Email;
+	
+	@Column(name = "Photo")
+	private Blob Photo;
+	
+	//Will be auto generated
+	@Column(name = "CreatedOn")
+	private Date CreatedOn;
+
+	@Column(name = "CreatedBy")
+	private String CreatedBy;
+	
+	//Will be auto generated
+	@Column(name = "ModifiedOn")
+	private Date ModifiedOn;
+	
+	@Column(name = "ModifiedBy")
+	private String ModifiedBy;
+	
+
+API: @RequestMapping("/api/faculty")
+
+	@PostMapping("/save-faculty")
+
+	@PostMapping("/save-faculty-list")
+
+	@GetMapping("/get-faculty-list")
+	
+	@GetMapping("/get-faculty-by-id")
+	
+	@GetMapping("/get-faculty-by-first-name/{FirstName}")
+
+	@DeleteMapping("/delete-faculty-by-id")
+
+	@PutMapping("/update-faculty")
+
+	@DeleteMapping("/delete-all-faculty")

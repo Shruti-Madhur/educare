@@ -1,0 +1,38 @@
+@Table(name = "OSPExam")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@Column(name = "exam_date")
+	private Date examDate;
+	
+	@Column(name = "created_on")
+	private Date createdOn;
+	
+	@Column(name = "created_by")
+	private String createdBy;
+	
+	@Column(name = "modified_on")
+	private Date modifiedOn;
+	
+	@Column(name = "modified_by")
+	private String modifiedBy;
+	
+
+	
+API: @RequestMapping("/api/ospexam")
+
+	@PostMapping("/save-ospexam")
+
+	@PostMapping("/save-ospexam-list")
+
+	@GetMapping("/get-ospexam-list")
+
+	@GetMapping("/get-ospexam-by-id")
+
+	@DeleteMapping("/delete-ospexam-by-id")
+
+	@PutMapping("/update-ospexam")
+
+	@DeleteMapping("/delete-all-ospexam")

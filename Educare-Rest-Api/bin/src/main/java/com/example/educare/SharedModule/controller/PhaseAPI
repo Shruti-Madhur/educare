@@ -1,0 +1,42 @@
+@Table(name = "Phase")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "PhaseName")
+	private String PhaseName;
+	
+	@Column(name = "PhaseYear")
+	private int PhaseYear;
+	
+	//Will be auto generated
+	@Column(name = "CreatedOn")
+	private Date CreatedOn;
+	
+	@Column(name = "CreatedBy")
+	private String CreatedBy;
+	
+	//Will be auto generated
+	@Column(name = "ModifiedOn")
+	private Date ModifiedOn;
+	
+	@Column(name = "ModifiedBy")
+	private String ModifiedBy;
+	
+	
+API: @RequestMapping(name = "/api/phase")
+
+	@PostMapping("/save-phase")
+
+	@PostMapping("/save-phase-list")
+
+	@GetMapping("/get-phase-list")
+
+	@GetMapping("/get-phase-by-id")
+
+	@DeleteMapping("/delete-phase-by-id")
+
+	@PutMapping("/update-phase")
+
+	@DeleteMapping("/delete-all-phase")

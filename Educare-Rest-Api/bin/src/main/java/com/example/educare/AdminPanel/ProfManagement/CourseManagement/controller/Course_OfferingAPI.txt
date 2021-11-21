@@ -1,0 +1,59 @@
+@Table(name = "course")
+	
+		@Id
+		@GeneratedValue(strategy = GenerationType.AUTO)
+		private int id;
+		
+		@ForeignKey(name = "faculty_id")
+		private int facultyId;
+		
+		@ForeignKey(name = "subject_id")
+		private int subjectId;
+		
+		@ForeignKey(name = "prof_id")
+		private int profId;
+		
+		@Column(name = "course_time")
+		private Date courseTime;
+		
+		@Column(name = "section_no")
+		private int sectionNo;
+		
+		@Column(name = "room_id")
+		private int roomId;
+		
+		@Column(name = "course_year")
+		private int courseYear;
+		
+		@Column(name = "course_semester")
+		private String courseSemester;
+		
+		@Column(name = "created_on")
+		private Date createdOn;
+		
+		@Column(name = "created_by")
+		private String createdBy;
+		
+		@Column(name = "modified_on")
+		private Date modifiedOn;
+		
+		@Column(name = "modified_by")
+		private String modifiedBy;
+
+
+
+API:@RequestMapping("/api/manage/course")
+
+		@PostMapping("/save-course")
+		
+		@PostMapping("/save-course-list")
+	
+		@GetMapping("/get-course-list")
+	
+		@GetMapping("/get-course-by-id")
+	
+		@DeleteMapping("/delete-course-by-id")
+	
+		@PutMapping("/update-course")
+		
+		@DeleteMapping("/delete-all-course")

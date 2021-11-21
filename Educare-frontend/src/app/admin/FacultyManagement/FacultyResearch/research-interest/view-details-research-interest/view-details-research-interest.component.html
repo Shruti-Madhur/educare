@@ -1,0 +1,37 @@
+
+
+<div class="row row justify-content-center align-self-center ">
+    <div style="width: 500px" *ngIf="research">
+      <h2 class="title text-center mb-4">Research Interest Details</h2>
+      <div class="details my-2">
+        <label><b>facultyId: </b></label> {{ research.facultyId }}
+      </div>
+      <div class="details my-2">
+        <label><b>Field: </b></label> {{ research.field }}
+      </div>
+      <div class="details my-2">
+        <label><b>Subject: </b></label> {{ research.subject }}
+      </div>
+      <div class="details my-2">
+        <label><b>Description: </b></label> {{ research.description }}
+      </div>
+    
+  
+      <br />
+      <br />
+      <button
+        (click)="updateLink()"
+        class="btn btn-primary btn-outline-dark text-white m-1"
+      >
+        <i class="fa fa-edit"></i> update
+      </button>
+      <button
+        (click)="list()"
+        class="btn btn-success btn-outline-dark text-white m-3"
+      >
+        <i class="fa fa-reply"></i> Back</button
+      ><br />
+    </div>
+  </div>
+  
+

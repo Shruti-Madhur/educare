@@ -1,0 +1,99 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 class="text-center fw-bold view-research">Research Supervision List</h2>
+    </div>
+    <button
+      (click)="addResearch()"
+      class="btn btn-primary btn-outline-dark text-white my-3"
+    >
+      <i class="fa fa-plus"></i> Create
+    </button>
+    <div class="d-flex mb-3">
+      <form
+        class="form-inline d-flex md-form form-sm active-pink active-pink-2 mt-2"
+        [formGroup]="searchFormName"
+        (ngSubmit)="OnSubmitName(searchFormName.value)"
+      >
+        <b>Search Project Name </b>
+        <input
+          class="form-control-sm mr-sm-2 mx-3"
+          type="text"
+          placeholder="Enter Project Name"
+          id="projectName"
+          formControlName="projectName"
+        />
+  
+        <button type="submit" class="btn btn-outline-success me-3 my-sm-0">
+          Search
+        </button>
+      </form>
+  
+      <form
+        class="form-inline d-flex md-form form-sm active-pink active-pink-2 mt-2"
+        [formGroup]="searchFormId"
+        (ngSubmit)="OnSubmitId(searchFormId.value)"
+      >
+        <b class="ms-4">Search by Faculty Id </b>
+        <input
+          class="form-control-sm mr-sm-2 mx-3"
+          type="text"
+          placeholder="Enter Faculty Id "
+          id="id "
+          formControlName="id"
+        />
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+          Search
+        </button>
+      </form>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped border-secondary">
+        <thead>
+          <tr>
+            <th>faculty Id</th>
+            <th>projectName</th>
+            <th>levelOfStudy</th>
+            <th>coSupervisor</th>
+            <th>areaOfResearch</th>
+            <th>currentCompletion</th>
+            <th>startDate</th>
+            <th>CompletionDate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let re of research | async">
+            <td>{{ re.id }}</td>
+            <td>{{ re.projectName }}</td>
+            <td>{{ re.levelOfStudy }}</td>
+            <td>{{ re.coSupervisor }}</td>
+            <td>{{ re.areaOfResearch }}</td>
+            <td>{{ re.currentCompletion }}</td>
+            <td>{{ re.startDate }}</td>
+            <td>{{ re.estimatedCompletionDate }}</td>
+  
+            <td>
+              <button
+                (click)="delete(re.id)"
+                class="btn btn-outline-dark text-white btn-danger"
+              >
+                <i class="fa fa-remove"></i>
+              </button>
+              <button
+                (click)="update(re.id)"
+                class="btn btn-info btn-outline-dark text-white mx-1"
+              >
+                <i class="fa fa-edit"></i>
+              </button>
+              <button
+                (click)="details(re.id)"
+                class="btn btn-success btn-outline-dark text-white"
+              >
+                <i class="fa fa-book"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

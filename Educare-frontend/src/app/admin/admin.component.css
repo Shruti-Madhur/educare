@@ -1,0 +1,21 @@
+::ng-deep .indicator_class > .mat-expansion-indicator:after {
+      color: white;
+}
+
+::ng-deep .mat-tooltip {
+    font-size: 12px;
+}
+
+mat-expansion-panel{
+    width: 100%;
+    background-color: #343a40;
+    color: #FFFFFF;
+}
+.menuItem{
+    color: #FFFFFF;
+    margin-left: 11px;
+}
+
+::ng-deep .mat-tooltip {
+    font-size: 12px;
+}

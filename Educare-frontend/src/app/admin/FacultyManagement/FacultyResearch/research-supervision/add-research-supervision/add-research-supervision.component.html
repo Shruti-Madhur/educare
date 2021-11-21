@@ -1,0 +1,106 @@
+<div class="row row justify-content-center align-self-center">
+    <div [hidden]="submitted" style="width: 500px">
+      <h3 class="mb-5 text-center add-research">Add Research Supervision</h3>
+  
+      <form (ngSubmit)="onSubmit()">
+        
+  
+        <div class="form-group">
+          <label for="name">Project Name</label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="projectName"
+            required
+            [(ngModel)]="research.projectName"
+            name="projectName"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">levelOfStudy </label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="levelOfStudy"
+            required
+            [(ngModel)]="research.levelOfStudy"
+            name="levelOfStudy"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">coSupervisor </label>
+          <input
+            type="text"
+            class="form-control my-3"
+            id="coSupervisor"
+            required
+            [(ngModel)]="research.coSupervisor"
+            name="coSupervisor"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="">areaOfResearch</label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="areaOfResearch"
+            required
+            [(ngModel)]="research.areaOfResearch"
+            name="areaOfResearch"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Current Completion</label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="currentCompletion"
+            required
+            [(ngModel)]="research.currentCompletion"
+            name="currentCompletion"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">startDate </label>
+          <input
+            type="date"
+            class="form-control my-3"
+            id="startDate"
+            required
+            [(ngModel)]="research.startDate"
+            name="startDate"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="">estimatedCompletionDate</label>
+          <input
+            type="date"
+            class="form-control my-2"
+            id="estimatedCompletionDate"
+            required
+            [(ngModel)]="research.estimatedCompletionDate"
+            name="estimatedCompletionDate"
+          />
+        </div>
+  
+       
+  
+        <button
+          type="submit"
+          class="btn btn-success btn btn-outline-dark text-white my-3"
+        >
+          <i class="fa fa-paper-plane"></i> Submit
+        </button>
+      </form>
+    </div>
+  
+    <div [hidden]="!submitted">
+      <h4 class="submitted">You submitted successfully!</h4>
+    </div>
+  </div>
+  

@@ -1,0 +1,52 @@
+<div class="row row justify-content-center align-self-center">
+    <div style="width: 500px" *ngIf="research">
+      <h2 class="title text-center mb-4">Research Project Details</h2>
+      <div class="details my-2">
+        <label><b>facultyId: </b></label> {{ research.facultyId }}
+      </div>
+  
+      <div class="details my-2">
+        <label><b>researchProjectName: </b></label>
+        {{ research.researchProjectName }}
+      </div>
+      <div class="details my-2">
+        <label><b>journalName: </b></label> {{ research.journalName }}
+      </div>
+      <div class="details my-2">
+        <label><b>impactFactor: </b></label> {{ research.impactFactor }}
+      </div>
+      <div class="details my-2">
+        <label><b>citeScore: </b></label> {{ research.citeScore }}
+      </div>
+      <div class="details my-2">
+        <label><b>fromDate: </b></label> {{ research.fromDate }}
+      </div>
+      <div class="details my-2">
+        <label><b>toDate: </b></label> {{ research.toDate }}
+      </div>
+  
+      <div class="details my-2">
+        <label><b>collaboration: </b></label> {{ research.collaboration }}
+      </div>
+      <div class="details my-2">
+        <label><b>sourceOfFund: </b></label> {{ research.sourceOfFund }}
+      </div>
+  
+      <br />
+      <br />
+      <button
+        (click)="updateLink()"
+        class="btn btn-primary btn-outline-dark text-white m-1"
+      >
+        <i class="fa fa-edit"></i> update
+      </button>
+      <button
+        (click)="list()"
+        class="btn btn-success btn-outline-dark text-white m-3"
+      >
+        <i class="fa fa-reply"></i> Back</button
+      ><br />
+    </div>
+  </div>
+  
+

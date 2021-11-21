@@ -1,0 +1,60 @@
+@Table(name = "Enrollment")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@ManyToOne
+	@JoinColumn(name = "CourseId")
+	private int CourseId;
+	
+	@ManyToOne
+	@JoinColumn(name = "StudentId")
+	private int StudentId;
+	
+	@JoinColumn(name = "ProfId")
+	private int ProfId;
+	
+	@Column(name = "SectionNo")
+	private int SectionNo;
+	
+	@Column(name = "RoomId")
+	private int RoomId;
+	
+	@Column(name = "Year")
+	private int Year;
+	
+	@Column(name = "Semester")
+	private String Semester;
+
+	//Will be auto generated
+	@Column(name = "CreatedOn")
+	private Date CreatedOn;
+
+	@Column(name = "CreatedBy")
+	private String CreatedBy;
+	
+	//Will be auto generated
+	@Column(name = "ModifiedOn")
+	private Date ModifiedOn;
+	
+	@Column(name = "ModifiedBy")
+	private String ModifiedBy;
+	
+	
+
+API: @RequestMapping("/api/enrollment")
+
+	@PostMapping("/save-enrollment")
+
+	@PostMapping("/save-enrollment-list")
+
+	@GetMapping("/get-enrollment-list")
+
+	@GetMapping("/get-enrollment-by-id")
+
+	@DeleteMapping("/delete-enrollment-by-id")
+
+	@PutMapping("/update-enrollment")
+
+	@DeleteMapping("/delete-all-enrollment")

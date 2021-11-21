@@ -1,0 +1,58 @@
+<div class="row row justify-content-center align-self-center">
+    <div style="width: 500px">
+      <h3 class="mb-5 text-center add-research">Add Research Interest</h3>
+  
+      <form (ngSubmit)="onSubmit()">
+
+       
+
+        <div class="form-group">
+          <label for="name"> Field </label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="field"
+            required
+            [(ngModel)]="research.field"
+            name="field"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Subject </label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="subject"
+            required
+            [(ngModel)]="research.subject"
+            name="subject"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Description </label>
+          <input
+            type="text"
+            class="form-control my-3"
+            id="description"
+            required
+            [(ngModel)]="research.description"
+            name="description"
+          />
+        </div>
+  
+        
+  
+        <button
+          type="submit"
+          class="btn btn-success btn btn-outline-dark text-white my-3"
+        >
+          <i class="fa fa-paper-plane"></i> Submit
+        </button>
+      </form>
+    </div>
+  
+  </div>
+  
+
+

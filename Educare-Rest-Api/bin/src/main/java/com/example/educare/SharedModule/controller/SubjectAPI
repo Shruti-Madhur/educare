@@ -1,0 +1,50 @@
+@Table(name = "Subject")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "SubjectCode")
+	private String SubjectCode;
+	
+	@Column(name = "SubjectName")
+	private String SubjectName;
+	
+	@ManyToOne
+	@JoinColumn(name = "DeptId")
+	private int DeptId;
+	
+	@ManyToOne
+	@JoinColumn(name = "PhaseId")
+	private int PhaseId;
+	
+	//Will be auto generated
+	@Column(name = "CreatedOn")
+	private Date CreatedOn;
+	
+	@Column(name = "CreatedBy")
+	private String CreatedBy;
+	
+	//Will be auto generated
+	@Column(name = "ModifiedOn")
+	private Date ModifiedOn;
+	
+	@Column(name = "ModifiedBy")
+	private String ModifiedBy;
+	
+	
+API: @RequestMapping("/api/subject")
+
+	@PostMapping("/save-subject")
+
+	@PostMapping("/save-subject-list")
+
+	@GetMapping("/get-subject-list")
+
+	@GetMapping("/get-subject-by-id")
+
+	@DeleteMapping("/delete-subject-by-id")
+
+	@PutMapping("/update-subject")
+
+	@DeleteMapping("/delete-all-subject")

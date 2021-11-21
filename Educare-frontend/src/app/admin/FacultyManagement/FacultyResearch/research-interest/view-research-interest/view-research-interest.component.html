@@ -1,0 +1,90 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 class="text-center fw-bold view-research">Research Interest List</h2>
+    </div>
+    <button
+      (click)="addResearch()"
+      class="btn btn-primary btn-outline-dark text-white mb-3"
+    >
+      <i class="fa fa-plus"></i> Create
+    </button>
+    <div class="d-flex mb-3">
+      <form
+        class="form-inline d-flex md-form form-sm active-pink active-pink-2 mt-2"
+        [formGroup]="searchFormName"
+        (ngSubmit)="OnSubmitName(searchFormName.value)"
+      >
+        <b class="me-2">Search subject</b>
+        <input
+          class="form-control mr-sm-2"
+          type="text"
+          placeholder="Enter subject Name"
+          id="subject"
+          formControlName="subject"
+        />
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+          Search
+        </button>
+      </form>
+      <form
+        class="form-inline d-flex md-form form-sm active-pink active-pink-2 mt-2"
+        [formGroup]="searchFormId"
+        (ngSubmit)="OnSubmitId(searchFormId.value)"
+      >
+        <b class="ms-5">Id Search </b>
+        <input
+          class="form-control mr-sm-2 ms-2"
+          type="text"
+          placeholder="Enter Id "
+          id="id"
+          formControlName="id"
+        />
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+          Search
+        </button>
+      </form>
+    </div>
+  
+    <div class="panel-body">
+      <table class="table table-striped border-secondary">
+        <thead>
+          <tr>
+            <th>faculty Id</th>
+            <th>Field</th>
+            <th>Subject</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let re of research | async">
+            <td>{{ re.facultyId }}</td>
+            <td>{{ re.field }}</td>
+            <td>{{ re.subject }}</td>
+            <td>{{ re.description }}</td>
+  
+            <td>
+              <button
+                (click)="delete(re.id)"
+                class="btn btn-outline-dark text-white btn-danger"
+              >
+                <i class="fa fa-remove"></i>
+              </button>
+              <button
+                (click)="update(re.id)"
+                class="btn btn-info btn-outline-dark text-white mx-1"
+              >
+                <i class="fa fa-edit"></i>
+              </button>
+              <button
+                (click)="details(re.id)"
+                class="btn btn-success btn-outline-dark text-white"
+              >
+                <i class="fa fa-book"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

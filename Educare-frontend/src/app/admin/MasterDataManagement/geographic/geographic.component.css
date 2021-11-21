@@ -1,0 +1,22 @@
+.content{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.mat-raised-button{
+    height: 40px !important;
+    width: 25% !important;
+}
+
+.mat-raised-button.mat-success {
+    background-color: #4dc24d !important;
+    color: white;
+}
+
+.mat-table {
+    background-color: #F4F6F9 !important;
+}
+
+.mat-paginator{
+    background-color: #F4F6F9 !important;
+}

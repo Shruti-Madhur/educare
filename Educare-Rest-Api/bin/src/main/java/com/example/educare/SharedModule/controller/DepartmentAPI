@@ -1,0 +1,44 @@
+@Table(name = "Department")
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "DeptName")
+	private String DeptName;
+	
+	@Column(name = "DeptHead")
+	private String DeptHead;
+
+	@Column(name = "DeptCode")
+	private String DeptCode;
+	
+	//Will be auto generated
+	@Column(name = "CreatedOn")
+	private Date CreatedOn;
+
+	@Column(name = "CreatedBy")
+	private String CreatedBy;
+	
+	//Will be auto generated
+	@Column(name = "ModifiedOn")
+	private Date ModifiedOn;
+	
+	@Column(name = "ModifiedBy")
+	private String ModifiedBy;
+	
+
+API: @RequestMapping("/api/department")
+
+	@PostMapping("/save-department")
+
+	@PostMapping("/save-department-list")
+
+	@GetMapping("/get-department-list")
+
+	@GetMapping("/get-department-by-id")
+
+	@DeleteMapping("/delete-department-by-id")
+
+	@PutMapping("/update-department")
+
+	@DeleteMapping("/delete-all-department")

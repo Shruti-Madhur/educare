@@ -1,0 +1,32 @@
+@Table(name = "Upazila")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "Name")
+	private String Name;
+	
+	@Column(name = "Geocode")
+	private String Geocode;
+	
+	@ManyToOne
+	@JoinColumn(name = "DistrictId")
+	private int DistrictId;
+
+
+API: @RequestMapping("/api/upazila")
+
+	@PostMapping("/save-upazila")
+
+	@PostMapping("/save-upazila-list")
+
+	@GetMapping("/get-upazila-list")
+
+	@GetMapping("/get-upazila-by-id")
+
+	@DeleteMapping("/delete-upazila-by-id")
+
+	@PutMapping("/update-upazila")
+
+	@DeleteMapping("/delete-all-upazila")

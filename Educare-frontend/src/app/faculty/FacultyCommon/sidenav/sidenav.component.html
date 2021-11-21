@@ -1,0 +1,151 @@
+<mat-nav-list fxFlexFill dense>
+  <mat-accordion [multi]="false">
+    <div class="mainList">
+
+      <div class="submenuHeader">
+        <div class="header">
+          <i class='bx bx-book-bookmark' style="font-size: 2rem; margin-bottom: -3px;"></i>
+          <span class="headerText">Educare</span>
+        </div>
+
+        <mat-divider></mat-divider>
+        <h2 matSubheader style="color:rgb(27, 27, 27);">Applications</h2>
+      </div>
+
+      <div class="notExpension">
+        <mat-list-item (click)="othersControl()" routerLink="/faculty/dashboard" [routerLinkActive]="['list-item-active']">
+
+          <i class='bx bxs-dashboard' style="font-size: 1.2rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">Dashboard</span>
+
+        </mat-list-item>
+      </div>
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true"  [expanded]="courseExpansion" dense>
+        <mat-expansion-panel-header (click)="coursePanel()">
+
+          <i class='bx bxs-graduation' style="font-size: 1.4rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">My Courses</span>
+
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          <mat-list-item routerLink="/faculty/current-courses" routerLinkActive="list-item-active">
+
+            <i class='bx bxs-right-top-arrow-circle' style="font-size: 1.2rem;"></i>
+            <span class="menuItem" style="font-size: 15px;">Current Courses</span>
+
+          </mat-list-item>
+
+          <mat-list-item routerLink="/faculty/previous-courses" routerLinkActive="list-item-active">
+
+            <i class='bx bxs-left-down-arrow-circle' style="font-size: 1.2rem; "></i>
+            <span class="menuItem" style="font-size: 15px;">Previous Courses</span>
+
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+
+
+      <div class="notExpension">
+        <mat-list-item (click)="othersControl()" routerLink="/faculty/students" routerLinkActive="list-item-active">
+
+          <i class='bx bxs-group' style="font-size: 1.4rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">My Students</span>
+
+        </mat-list-item>
+      </div>
+
+      <div class="notExpension">
+        <mat-list-item (click)="othersControl()" routerLink="/faculty/attandance" routerLinkActive="list-item-active">
+
+          <i class='bx bx-list-ol' style="font-size: 1.4rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">Attandance</span>
+
+        </mat-list-item>
+      </div>
+
+      <div class="notExpension">
+        <mat-list-item (click)="othersControl()" routerLink="/faculty/class-routine" routerLinkActive="list-item-active">
+
+          <i class='bx bxs-watch' style="font-size: 1.4rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">Class Routine</span>
+
+        </mat-list-item>
+      </div>
+
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" [expanded]="examExpansion" dense>
+        <mat-expansion-panel-header (click)="examPanel()" >
+
+          <i class='bx bx-stats' style="font-size: 1.4rem;"></i>
+          <span class="menuItem" style="font-size: 18px;">Exam</span>
+
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          <mat-list-item routerLink="/faculty/exam/routine" routerLinkActive="list-item-active">
+
+            <i class='bx bx-slider-alt' style="font-size: 1.2rem;"></i>
+            <span class="menuItem" style="font-size: 15px;">Exam Routine</span>
+
+          </mat-list-item>
+          <mat-list-item routerLink="/faculty/exam/seat-plan" routerLinkActive="list-item-active">
+
+            <i class='bx bx-shape-triangle' style="font-size: 1.2rem; "></i>
+            <span class="menuItem" style="font-size: 15px;">Seat Plan</span>
+
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <div class="notExpension">
+        <mat-list-item (click)="othersControl()" routerLink="/faculty/grade-submission" routerLinkActive="list-item-active">
+
+          <i class='bx bxs-up-arrow-circle' style="font-size: 1.4rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">Grade Submission</span>
+
+        </mat-list-item>
+      </div>
+
+      <div class="notExpension">
+        <mat-list-item (click)="othersControl()" routerLink="/faculty/advisee" routerLinkActive="list-item-active">
+
+          <i class='bx bx-message-dots' style="font-size: 1.4rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">Advisee</span>
+
+        </mat-list-item>
+      </div>
+
+
+
+      <mat-expansion-panel [class.mat-elevation-z0]="true" [expanded]="researchExpansion" dense>
+        <mat-expansion-panel-header (click)="researchPanel()" >
+
+          <i class='bx bx-code-block' style="font-size: 1.4rem;"></i>
+          <span class="menuItem" style="font-size: 18px;">Manage Faculty</span>
+
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          
+          <mat-list-item routerLink="/faculty/researchAllInOne/all" routerLinkActive="list-item-active">
+
+            <i class='bx bx-show' style="font-size: 1.2rem; "></i>
+            <span class="menuItem" style="font-size: 15px;">View all</span>
+
+          </mat-list-item>
+
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+
+      <div class="notExpension">
+        <mat-list-item (click)="othersControl()" routerLink="/faculty/feedbacks" routerLinkActive="list-item-active">
+
+          <i class='bx bxs-conversation' style="font-size: 1.4rem; "></i>
+          <span class="menuItem" style="font-size: 18px;">Feedback</span>
+
+        </mat-list-item>
+      </div>
+    </div>
+  </mat-accordion>
+</mat-nav-list>

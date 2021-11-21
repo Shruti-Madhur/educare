@@ -1,0 +1,38 @@
+@Table(name = "written_exam")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@Column(name = "exam_date")
+	private Date examDate;
+	
+	@Column(name = "created_on")
+	private Date createdOn;
+	
+	@Column(name = "created_by")
+	private String createdBy;
+	
+	@Column(name = "modified_on")
+	private Date modifiedOn;
+	
+	@Column(name = "modified_by")
+	private String modifiedBy;
+	
+
+	
+API: @RequestMapping("/api/written_exam")
+
+	@PostMapping("/save-written_exam")
+
+	@PostMapping("/save-written_exam-list")
+
+	@GetMapping("/get-written_exam-list")
+
+	@GetMapping("/get-written_exam-by-id")
+
+	@DeleteMapping("/delete-written_exam-by-id")
+
+	@PutMapping("/update-written_exam")
+
+	@DeleteMapping("/delete-all-written_exam")

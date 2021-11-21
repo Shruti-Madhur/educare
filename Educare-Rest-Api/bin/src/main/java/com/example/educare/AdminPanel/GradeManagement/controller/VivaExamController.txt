@@ -1,0 +1,38 @@
+@Table(name = "viva_exam")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@Column(name = "exam_date")
+	private Date examDate;
+	
+	@Column(name = "created_on")
+	private Date createdOn;
+	
+	@Column(name = "created_by")
+	private String createdBy;
+	
+	@Column(name = "modified_on")
+	private Date modifiedOn;
+	
+	@Column(name = "modified_by")
+	private String modifiedBy;
+	
+
+	
+API: @RequestMapping("/api/viva_exam")
+
+	@PostMapping("/save-viva_exam")
+
+	@PostMapping("/save-viva_exam-list")
+
+	@GetMapping("/get-viva_exam-list")
+
+	@GetMapping("/get-viva_exam-by-id")
+
+	@DeleteMapping("/delete-viva_exam-by-id")
+
+	@PutMapping("/update-viva_exam")
+
+	@DeleteMapping("/delete-all-viva_exam")

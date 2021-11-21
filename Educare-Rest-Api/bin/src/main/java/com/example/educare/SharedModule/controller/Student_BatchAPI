@@ -1,0 +1,49 @@
+@Table(name = "Student_Batch")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "BatchName")
+	private String BatchName;
+	
+	@Column(name = "BatchYear")
+	private int BatchYear;
+	
+	@Column(name = "AdmissionYear")
+	private int AdmissionYear;
+	
+	@ManyToMany
+	@JoinColumn(name = "StudentId")
+	private int StudentId;
+	
+	//Will be auto generated
+	@Column(name = "CreatedOn")
+	private Date CreatedOn;
+	
+	@Column(name = "CreatedBy")
+	private String CreatedBy;
+	
+	//Will be auto generated
+	@Column(name = "ModifiedOn")
+	private Date ModifiedOn;
+	
+	@Column(name = "ModifiedBy")
+	private String ModifiedBy;
+	
+	
+API: @RequestMapping("/api/batch")
+
+	@PostMapping("/save-batch")
+
+	@PostMapping("/save-batch-list")
+
+	@GetMapping("/get-batch-list")
+
+	@GetMapping("/get-batch-by-id")
+
+	@DeleteMapping("/delete-batch-by-id")
+
+	@PutMapping("/update-batch")
+
+	@DeleteMapping("/delete-all-batch")

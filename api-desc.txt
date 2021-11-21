@@ -1,0 +1,4099 @@
+All working perfectly!!!
+=======================
+Search:
+1. Faculty
+2. Address
+3. Division
+4. District
+5. Upazila
+6. Student
+7. Batch
+8. Phase
+9. Department
+10. Part
+11. Subject
+12.Institute
+13. Section
+===========================
+
+Masterdata API
+1. Faculty API Description:
+	1. Description: Here you can add or not add permanentAddress and presentAddress, it will work fine.
+	   Endpoint: /api/manage/faculty/profile/add
+	   Method: POST
+	   Perameter:
+		{
+			"firstName" : "Dr.",
+			"lastName" : "Gorib",
+			"dateOfBirth" : "1999-09-05",
+			"gender" : "Male",
+			"nID" : "554546121564",
+			"permanentAddress" : {
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 0,
+					"name": "Dhaka",
+					"geocode": "10"
+				},
+				"district": {
+					"id": 0,
+					"name": "Dhaka",
+					"geocode": "1020"
+				},
+				"upazila": {
+					"id": 0,
+					"name": "Dhanmondi",
+					"geocode": "102030"
+				}
+			},
+			"presentAddress" : {
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 0,
+					"name": "Dhaka",
+					"geocode": "10"
+				},
+				"district": {
+					"id": 0,
+					"name": "Dhaka",
+					"geocode": "1020"
+				},
+				"upazila": {
+					"id": 0,
+					"name": "Dhanmondi",
+					"geocode": "102030"
+				}
+			},
+			"cellphone" : "01767310339",
+			"email" : "alifcse49@gmail.com"
+		}
+	   Response Body:
+		{
+			"id": 1,
+			"firstName": "Dr.",
+			"lastName": "Gorib",
+			"dateOfBirth": "1999-09-05",
+			"age": 22,
+			"gender": "Male",
+			"permanentAddress": {
+				"id": 904,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 904,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": null
+				},
+				"district": {
+					"id": 954,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 754,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"presentAddress": {
+				"id": 905,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 905,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": null
+				},
+				"district": {
+					"id": 955,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 755,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"cellphone": "01767310339",
+			"email": "alifcse49@gmail.com",
+			"photo": null,
+			"createdOn": "2021-09-14",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null,
+			"nid": null
+		}
+
+	2. Description: Here you can add or not add permanentAddress and presentAddress, it will work fine.
+	   Endpoint: /api/manage/faculty/profile/get-all
+	   Method: GET
+	   Response Body:
+		[
+			{
+				"id": 1,
+				"firstName": "Dr.",
+				"lastName": "Gorib",
+				"dateOfBirth": "1999-09-05",
+				"age": 22,
+				"gender": "Male",
+				"permanentAddress": {
+					"id": 904,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 904,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": []
+					},
+					"district": {
+						"id": 954,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": []
+					},
+					"upazila": {
+						"id": 754,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"presentAddress": {
+					"id": 905,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+						"division": {
+						"id": 905,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": []
+					},
+					"district": {
+						"id": 955,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": []
+					},
+					"upazila": {
+						"id": 755,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"photo": null,
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null,
+				"nid": null
+			},
+			{
+				"id": 2,
+				"firstName": "Dr.",
+				"lastName": "Alex",
+				"dateOfBirth": "1999-09-05",
+				"age": 22,
+				"gender": "Male",
+				"permanentAddress": {
+					"id": 906,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 906,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": []
+					},
+					"district": {
+						"id": 956,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": []
+					},
+					"upazila": {
+						"id": 756,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"presentAddress": {
+					"id": 907,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 907,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": []
+					},
+					"district": {
+						"id": 957,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": []
+					},
+					"upazila": {
+						"id": 757,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"photo": null,
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null,
+				"nid": null
+			}
+		]
+	   
+	3. Description:
+	   Endpoint: /api/manage/faculty/profile/get/2
+	   Method: GET
+	   Response Body:
+		{
+			"id": 2,
+			"firstName": "Dr.",
+			"lastName": "Alex",
+			"dateOfBirth": "1999-09-05",
+			"age": 22,
+			"gender": "Male",
+			"permanentAddress": {
+				"id": 906,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 906,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": []
+				},
+				"district": {
+					"id": 956,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": []
+				},
+				"upazila": {
+					"id": 756,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"presentAddress": {
+				"id": 907,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 907,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": []
+				},
+				"district": {
+					"id": 957,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": []
+				},
+				"upazila": {
+					"id": 757,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"cellphone": "01767310339",
+			"email": "alifcse49@gmail.com",
+			"photo": null,
+			"createdOn": "2021-09-14",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null,
+			"nid": null
+		}
+	   
+	4. Description:
+	   Endpoint: /api/manage/faculty/profile/delete/2
+	   Method: DELETE
+	   Response Body: Faculty removed 2!!
+	   
+	5. Description: Here you can add or not add permanentAddress and presentAddress, it will work fine.
+	   Endpoint: /api/manage/faculty/profile/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 1,
+			"firstName": "Dr.",
+			"lastName": "Alex Khan",
+			"dateOfBirth": "1999-09-05",
+			"age": 22,
+			"gender": "Male",
+			"permanentAddress": {
+				"street": "Dhanmondi 32",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": []
+				},
+				"district": {
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": []
+				},
+				"upazila": {
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"presentAddress": {
+				"street": "Dhanmondi 32",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": []
+				},
+				"district": {
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": []
+				},
+				"upazila": {
+					"name": "asdfsdaf",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"cellphone": "01767310339",
+			"email": "alifcse49@gmail.com",
+			"photo": null,
+			"createdOn": "2021-09-14",
+			"createdBy": null,
+			"modifiedOn": "2021-09-14",
+			"modifiedBy": null,
+			"nid": null
+		}
+	   
+
+2. Address API Description:
+
+	1. Description: We can refer only id of Division, District, Upazila as object id shown below.
+	   Endpoint: /api/masterdata/geography/address/add
+	   Method: POST
+	   Perameter:
+		{
+			"street" : "Kalabagan",
+			"postOffice" : "Dhanmondi",
+			"postalCode" : "1205",
+			"division" : {
+				"id" : 55
+			},
+			"district" : {
+				"id": 5527,
+                "name": "DINAJPUR"
+			},
+			"upazila" : {
+				"id" : 552710
+			}
+		}
+	   Response Body:
+		{
+			"id": 902,
+			"street": "Kalabagan",
+			"postOffice": "Dhanmondi",
+			"postalCode": "1205",
+			"division": {
+			"id": 55,
+			"name": "RANGPUR",
+			"geocode": null,
+			"districts": null
+			},
+			"district": {
+				"id": 5527,
+				"name": "DINAJPUR",
+				"geocode": "5527",
+				"division": null,
+				"upazilas": null
+			},
+			"upazila": {
+				"id": 552710,
+				"name": "BIRAMPUR",
+				"geocode": null,
+				"district": null
+			},
+			"createdOn": "2021-09-15 04:39:37",
+			"createdBy": null,
+			"modifiedOn": "2021-09-15 04:41:11",
+			"modifiedBy": null
+		}
+		
+	2. Description:
+	   Endpoint: /api/masterdata/geography/address/get-all
+	   Method: GET
+	   Response Body:
+		[
+			{
+				"id": 2552,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 55,
+					"name": "RANGPUR",
+					"geocode": null,
+					"districts": null,
+					"hibernateLazyInitializer": {}
+				},
+				"district": {
+					"id": 5527,
+					"name": "DINAJPUR",
+					"geocode": "5527",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 552710,
+					"name": "BIRAMPUR",
+					"geocode": null,
+					"district": null
+				},
+				"createdOn": "2021-09-15 04:30:59",
+				"createdBy": null,
+				"modifiedOn": "2021-09-15 04:30:59",
+				"modifiedBy": null
+			},
+			{
+				"id": 2602,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 55,
+					"name": "RANGPUR",
+					"geocode": null,
+					"districts": null,
+					"hibernateLazyInitializer": {}
+				},
+				"district": {
+					"id": 5527,
+					"name": "DINAJPUR",
+					"geocode": "5527",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 552710,
+					"name": "BIRAMPUR",
+					"geocode": null,
+					"district": null
+				},
+				"createdOn": "2021-09-15 04:34:44",
+				"createdBy": null,
+				"modifiedOn": "2021-09-15 04:34:44",
+				"modifiedBy": null
+			}
+		]
+
+	3. Description:
+	   Endpoint: /api/masterdata/geography/address/get/2652
+	   Method: GET
+	   Response Body:
+		{
+			"id": 2652,
+			"street": "New Market",
+			"postOffice": "Dhanmondi",
+			"postalCode": "1205",
+			"division": {
+				"id": 55,
+				"name": "RANGPUR",
+				"geocode": null,
+				"districts": null
+			},
+			"district": {
+				"id": 5527,
+				"name": "DINAJPUR",
+				"geocode": "5527",
+				"division": null,
+				"upazilas": null
+			},
+			"upazila": {
+				"id": 552710,
+				"name": "BIRAMPUR",
+				"geocode": null,
+				"district": null
+			},
+			"createdOn": "2021-09-15 04:39:37",
+			"createdBy": null,
+			"modifiedOn": "2021-09-15 04:41:11",
+			"modifiedBy": null
+		}
+	   
+	4. Description:
+	   Endpoint: /api/masterdata/geography/address/delete/2652
+	   Method: DELETE
+	   Response Body: Address removed 2652!!
+	   
+	5. Description: We can refer only id of Division, District, Upazila as object id shown below.
+	   Endpoint: /api/masterdata/geography/address/update
+	   Method: PUT
+	   Perameter:
+		{
+            "id" : 2652,
+			"street" : "New Market",
+			"postOffice" : "Dhanmondi",
+			"postalCode" : "1205",
+			"division" : {
+				"id" : 55
+			},
+			"district" : {
+				"id": 5527,
+                "name": "DINAJPUR"
+			},
+			"upazila" : {
+				"id" : 552710
+			}
+		}
+	   
+
+3. Division API Description:
+
+	1. Description:
+	   Endpoint: /api/masterdata/geography/division/add
+	   Method: POST
+	   Perameter:
+		{
+			"id" : 60,
+			"name" : "SYLHET"
+		}
+	   Response Body:
+		{
+			"id": 60,
+			"name": "SYLHET",
+			"geocode": "60",
+			"districts": null
+		}
+
+	2. Description:
+	   Endpoint: /api/masterdata/geography/division/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"id" : 60,
+				"name" : "SYLHET"
+			},
+			{
+				"id" : 55,
+				"name" : "RANGPUR"
+			}
+		]
+	   Response Body:
+		[
+			{
+				"id": 60,
+				"name": "SYLHET",
+				"geocode": "60",
+				"districts": null
+			},
+			{
+				"id": 55,
+				"name": "RANGPUR",
+				"geocode": "55",
+				"districts": null
+			}
+		]
+	   
+	3. Description:
+	   Endpoint: /api/masterdata/geography/division/get-all
+	   Method: GET
+	   Response Body:
+		[
+			{
+				"id": 55,
+				"name": "RANGPUR",
+				"geocode": null,
+				"districts": [
+					{
+						"id": 5527,
+						"name": "DINAJPUR",
+						"geocode": "5527",
+						"division": null,
+						"upazilas": [
+							{
+								"id": 552710,
+								"name": "BIRAMPUR",
+								"geocode": null,
+								"district": null
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 60,
+				"name": "SYLHET",
+				"geocode": null,
+				"districts": [
+					{
+						"id": 6036,
+						"name": "HABIGANJ",
+						"geocode": "6036",
+						"division": null,
+						"upazilas": [
+							{
+								"id": 603602,
+								"name": "AJMIRIGANJ",
+								"geocode": "603602",
+								"district": null
+							}
+						]
+					},
+					{
+						"id": 6058,
+						"name": "HABIGANJ",
+						"geocode": "6058",
+						"division": null,
+						"upazilas": [
+							{
+								"id": 603605,
+								"name": "BAHUBAL",
+								"geocode": null,
+								"district": null
+							}
+						]
+					}
+				]
+			}
+		]
+
+	4. Description:
+	   Endpoint: /api/masterdata/geography/division/get/60
+	   Method: GET
+	   Response Body:
+		{
+			"id": 60,
+			"name": "SYLHET",
+			"geocode": null,
+			"districts": [
+				{
+					"id": 6036,
+					"name": "HABIGANJ",
+					"geocode": "6036",
+					"division": null,
+					"upazilas": [
+						{
+							"id": 603602,
+							"name": "AJMIRIGANJ",
+							"geocode": "603602",
+							"district": null
+						}
+					]
+				},
+				{
+					"id": 6058,
+					"name": "HABIGANJ",
+					"geocode": "6058",
+					"division": null,
+					"upazilas": [
+						{
+							"id": 603605,
+							"name": "BAHUBAL",
+							"geocode": null,
+							"district": null
+						}
+					]
+				}
+			]
+		}
+		
+	5. Description:
+	   Endpoint: /api/masterdata/geography/division/delete/55
+	   Method: DELETE
+	   Response Body: Division removed 55!!
+	   
+	   
+	6. Description:
+	   Endpoint: /api/masterdata/geography/division/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 60,
+			"name": "UDVOT PLACE"
+		}
+	   
+	   
+	7. Description:
+	   Endpoint: /api/masterdata/geography/division/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+	   
+	   
+
+4. District API Description:
+
+	1. Description: If we want can pass only division id as object!
+	   Endpoint: /api/masterdata/geography/district/add
+	   Method: POST
+	   Perameter:
+		{
+			"id" : 6036,
+			"name" : "HABIGANJ",
+			"division" : {
+				"id" : 60,
+				"name" : "SYLHET"
+			}
+		}
+
+	   Response Body:
+		{
+			"id": 6036,
+			"name": "HABIGANJ",
+			"geocode": "6036",
+			"division": null,
+			"upazilas": null
+		}
+
+	2. Description: If we want can pass only division id as object!
+	   Endpoint: /api/masterdata/geography/district/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"id" : 6058,
+				"name" : "HABIGANJ",
+				"division" : {
+					"id" : 60,
+					"name" : "SYLHET"
+				}
+			},
+			{
+				"id" : 5527,
+				"name" : "DINAJPUR",
+				"division" : {
+					"id" : 55
+				}
+			}
+		]
+
+	   Response Body:
+		[
+			{
+				"id": 6058,
+				"name": "HABIGANJ",
+				"geocode": "6058",
+				"division": null,
+				"upazilas": null
+			},
+			{
+				"id": 5527,
+				"name": "DINAJPUR",
+				"geocode": "5527",
+				"division": null,
+				"upazilas": null
+			}
+		]
+	   
+	3. Description:
+	   Endpoint: /api/masterdata/geography/district/get-all
+	   Method: GET
+	   Response Body:
+		[
+			{
+				"id": 5527,
+				"name": "DINAJPUR",
+				"geocode": "5527",
+				"division": null,
+				"upazilas": [
+					{
+						"id": 552710,
+						"name": "BIRAMPUR",
+						"geocode": null,
+						"district": null
+					}
+				]
+			},
+			{
+				"id": 6036,
+				"name": "HABIGANJ",
+				"geocode": "6036",
+				"division": null,
+				"upazilas": [
+					{
+						"id": 603602,
+						"name": "AJMIRIGANJ",
+						"geocode": "603602",
+						"district": null
+					}
+				]
+			},
+			{
+				"id": 6058,
+				"name": "HABIGANJ",
+				"geocode": "6058",
+				"division": null,
+				"upazilas": [
+					{
+						"id": 603605,
+						"name": "BAHUBAL",
+						"geocode": null,
+						"district": null
+					}
+				]
+			}
+		]
+
+	4. Description:
+	   Endpoint: /api/masterdata/geography/district/get/6058
+	   Method: GET
+	   Response Body:
+		{
+			"id": 6058,
+			"name": "HABIGANJ",
+			"geocode": "6058",
+			"division": null,
+			"upazilas": [
+				{
+					"id": 603605,
+					"name": "BAHUBAL",
+					"geocode": null,
+					"district": null
+				}
+			]
+		}
+		
+	5. Description:
+	   Endpoint: /api/masterdata/geography/district/delete/904
+	   Method: DELETE
+	   Response Body: District removed 904!!
+	   
+	   
+	6. Description:
+	   Endpoint: /api/masterdata/geography/district/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 6058,
+			"name": "MAULVIBAZAR"
+		}
+	 
+	   
+	7. Description:
+	   Endpoint: /api/masterdata/geography/district/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+	   
+	   
+	   
+	   
+5. Upazila API Description:
+
+	1. Description: If we want can pass only district id as object!
+	   Endpoint: /api/masterdata/geography/upazila/add
+	   Method: POST
+	   Perameter:
+		{
+			"id" : 603602,
+			"name" : "AJMIRIGANJ",
+			"district" : {
+				"id" : 6036,
+				"name" : "HABIGANJ"
+			}
+		}
+	   Response Body:
+		{
+			"id": 603602,
+			"name": "AJMIRIGANJ",
+			"geocode": "603602",
+			"district": null
+		}
+
+	2. Description: If we want can pass only district id as object!
+	   Endpoint: /api/masterdata/geography/upazila/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"id" : 603605,
+				"name" : "BAHUBAL",
+				"district" : {
+					"id" : 6058
+				}
+			},
+			{
+				"id" : 552710,
+				"name" : "BIRAMPUR",
+				"district" : {
+					"id" : 5527
+				}
+			}
+		]
+	   Response Body:
+		[
+			{
+				"id": 603605,
+				"name": "BAHUBAL",
+				"geocode": null,
+				"district": null
+			},
+			{
+				"id": 552710,
+				"name": "BIRAMPUR",
+				"geocode": null,
+				"district": null
+			}
+		]
+	   
+	3. Description:
+	   Endpoint: /api/masterdata/geography/district/get-all
+	   Method: GET
+	   Response Body:
+		[
+			{
+				"id": 552710,
+				"name": "BIRAMPUR",
+				"geocode": null,
+				"district": null
+			},
+			{
+				"id": 603602,
+				"name": "AJMIRIGANJ",
+				"geocode": "603602",
+				"district": null
+			},
+			{
+				"id": 603605,
+				"name": "BAHUBAL",
+				"geocode": null,
+				"district": null
+			}
+		]
+		
+	4. Description:
+	   Endpoint: /api/masterdata/geography/upazila/get/552710
+	   Method: GET
+	   Response Body:
+		{
+			"id": 552710,
+			"name": "BIRAMPUR",
+			"geocode": null,
+			"district": null
+		}
+		
+	5. Description:
+	   Endpoint: /api/masterdata/geography/upazila/delete/603605
+	   Method: DELETE
+	   Response Body: Upazila removed 603605!!
+	   
+	   
+	6. Description:
+	   Endpoint: /api/masterdata/geography/upazila/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 552710,
+			"name": "WRONG PLACE"
+		}		
+	   
+	7. Description:
+	   Endpoint: /api/masterdata/geography/upazila/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+
+
+
+6. Student API Description:
+
+	1. Description: Here you can add or not add permanentAddress and presentAddress, it will work fine.
+	   Endpoint: /api/student/profile/add
+	   Method: POST
+	   Perameter:
+		{
+			"fullName": "Alif1323",
+			"studentId": "181-15-334",
+			"currentStatus": "Regular",
+			"cellphone": "01767310339",
+			"email": "alifcse49@gmail.com",
+			"nid": "554546121564",
+			"birthRegNO": "3497328975374983759837",
+			"dateOfBirth": "1997-08-18",
+			"age": 24,
+			"gender": "Male",
+			"nationality": "Bangladeshi",
+			"bloodGroup": "A+",
+			"maritialStatus": "Single",
+			"permanentAddress": {
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1254,
+					"name": "Dhaka",
+					"geocode": "10"
+				},
+				"district": {
+					"id": 1304,
+					"name": "Dhaka",
+					"geocode": "1020"
+				},
+				"upazila": {
+					"id": 1104,
+					"name": "Dhanmondi",
+					"geocode": "102030"
+				}
+			},
+			"presentAddress": {
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1255,
+					"name": "Dhaka",
+					"geocode": "10"
+				},
+				"district": {
+					"id": 1305,
+					"name": "Dhaka",
+					"geocode": "1020"
+				},
+				"upazila": {
+					"id": 1105,
+					"name": "Dhanmondi",
+					"geocode": "102030"
+				}
+			},
+			"fatherName": "Mr. NoMan",
+			"motherName": "Mrs. NoWoman",
+			"gurdianName": "Mr. Someone",
+			"parentMobibleNo": "01706344583",
+			"batch": {
+				"id" : 0,
+				"name": "Front Bencher",
+				"year": 2100,
+				"admissionYear": 2099
+			}
+		}
+		
+		Response Body:
+		{
+			"id": 856,
+			"fullName": "Alif1323",
+			"studentId": "181-15-334",
+			"currentStatus": "Regular",
+			"cellphone": "01767310339",
+			"email": "alifcse49@gmail.com",
+			"nid": "554546121564",
+			"birthRegNO": "3497328975374983759837",
+			"dateOfBirth": "1997-08-18",
+			"age": 24,
+			"gender": "Male",
+			"nationality": "Bangladeshi",
+			"bloodGroup": "A+",
+			"maritialStatus": "Single",
+			"permanentAddress": {
+				"id": 2210,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1254,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": null
+				},
+				"district": {
+					"id": 1304,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 1104,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"presentAddress": {
+				"id": 2211,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1255,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": null
+				},
+				"district": {
+					"id": 1305,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 1105,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"fatherName": "Mr. NoMan",
+			"motherName": "Mrs. NoWoman",
+			"gurdianName": "Mr. Someone",
+			"parentMobibleNo": "01706344583",
+			"batch": {
+				"id": 205,
+				"name": "Front Bencher",
+				"year": 2100,
+				"admissionYear": 2099,
+				"studentPersonalInfos": null,
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"photo": null,
+			"createdOn": "2021-09-14",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+
+	2. Description: Here you can add or not add permanentAddress and presentAddress, it will work fine.
+	   Endpoint: /api/student/profile/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"fullName": "Alif1323",
+				"studentId": "181-15-334",
+				"currentStatus": "Regular",
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"nid": "554546121564",
+				"birthRegNO": "3497328975374983759837",
+				"dateOfBirth": "1997-08-18",
+				"age": 24,
+				"gender": "Male",
+				"nationality": "Bangladeshi",
+				"bloodGroup": "A+",
+				"maritialStatus": "Single",
+				"permanentAddress": {
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1254,
+						"name": "Dhaka",
+						"geocode": "10"
+					},
+					"district": {
+						"id": 1304,
+						"name": "Dhaka",
+						"geocode": "1020"
+					},
+					"upazila": {
+						"id": 1104,
+						"name": "Dhanmondi",
+						"geocode": "102030"
+					}
+				},
+				"presentAddress": {
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1255,
+						"name": "Dhaka",
+						"geocode": "10"
+					},
+					"district": {
+						"id": 1305,
+						"name": "Dhaka",
+						"geocode": "1020"
+					},
+					"upazila": {
+						"id": 1105,
+						"name": "Dhanmondi",
+						"geocode": "102030"
+					}
+				},
+				"fatherName": "Mr. NoMan",
+				"motherName": "Mrs. NoWoman",
+				"gurdianName": "Mr. Someone",
+				"parentMobibleNo": "01706344583",
+				"batch": {
+					"id" : 0,
+					"name": "Valo na",
+					"year": 2100,
+					"admissionYear": 2099
+				}
+			},
+			{
+				"fullName": "Alif1323",
+				"studentId": "181-15-334",
+				"currentStatus": "Regular",
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"nid": "554546121564",
+				"birthRegNO": "3497328975374983759837",
+				"dateOfBirth": "1997-08-18",
+				"age": 24,
+				"gender": "Male",
+				"nationality": "Bangladeshi",
+				"bloodGroup": "A+",
+				"maritialStatus": "Single",
+				"permanentAddress": {
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1254,
+						"name": "Dhaka",
+						"geocode": "10"
+					},
+					"district": {
+						"id": 1304,
+						"name": "Dhaka",
+						"geocode": "1020"
+					},
+					"upazila": {
+						"id": 1104,
+						"name": "Dhanmondi",
+						"geocode": "102030"
+					}
+				},
+				"presentAddress": {
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1255,
+						"name": "Dhaka",
+						"geocode": "10"
+					},
+					"district": {
+						"id": 1305,
+						"name": "Dhaka",
+						"geocode": "1020"
+					},
+					"upazila": {
+						"id": 1105,
+						"name": "Dhanmondi",
+						"geocode": "102030"
+					}
+				},
+				"fatherName": "Mr. NoMan",
+				"motherName": "Mrs. NoWoman",
+				"gurdianName": "Mr. Someone",
+				"parentMobibleNo": "01706344583",
+				"batch": {
+					"id" : 0,
+					"name": "Khub valo",
+					"year": 2100,
+					"admissionYear": 2099
+				}
+			}
+		]
+
+	   Response Body:
+		[
+			{
+				"id": 852,
+				"fullName": "Alif1323",
+				"studentId": "181-15-334",
+				"currentStatus": "Regular",
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"nid": "554546121564",
+				"birthRegNO": "3497328975374983759837",
+				"dateOfBirth": "1997-08-18",
+				"age": 24,
+				"gender": "Male",
+				"nationality": "Bangladeshi",
+				"bloodGroup": "A+",
+				"maritialStatus": "Single",
+				"permanentAddress": {
+					"id": 2202,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1254,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1304,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1104,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"presentAddress": {
+					"id": 2203,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1255,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1305,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1105,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"fatherName": "Mr. NoMan",
+				"motherName": "Mrs. NoWoman",
+				"gurdianName": "Mr. Someone",
+				"parentMobibleNo": "01706344583",
+				"batch": {
+					"id": 202,
+					"name": "Valo na",
+					"year": 2100,
+					"admissionYear": 2099,
+					"studentPersonalInfos": null,
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"photo": null,
+				"createdOn": null,
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 853,
+				"fullName": "Alif1323",
+				"studentId": "181-15-334",
+				"currentStatus": "Regular",
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"nid": "554546121564",
+				"birthRegNO": "3497328975374983759837",
+				"dateOfBirth": "1997-08-18",
+				"age": 24,
+				"gender": "Male",
+				"nationality": "Bangladeshi",
+				"bloodGroup": "A+",
+				"maritialStatus": "Single",
+				"permanentAddress": {
+					"id": 2204,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1254,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1304,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1104,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"presentAddress": {
+					"id": 2205,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1255,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1305,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1105,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"fatherName": "Mr. NoMan",
+				"motherName": "Mrs. NoWoman",
+				"gurdianName": "Mr. Someone",
+				"parentMobibleNo": "01706344583",
+				"batch": {
+					"id": 203,
+					"name": "Khub valo",
+					"year": 2100,
+					"admissionYear": 2099,
+					"studentPersonalInfos": null,
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"photo": null,
+				"createdOn": null,
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+	   
+	3. Description:
+	   Endpoint: /api/student/profile/get-all
+	   Method: GET
+	   Response Body:
+		[
+			{
+				"id": 852,
+				"fullName": "Alif1323",
+				"studentId": "181-15-334",
+				"currentStatus": "Regular",
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"nid": "554546121564",
+				"birthRegNO": "3497328975374983759837",
+				"dateOfBirth": "1997-08-18",
+				"age": 24,
+				"gender": "Male",
+				"nationality": "Bangladeshi",
+				"bloodGroup": "A+",
+				"maritialStatus": "Single",
+				"permanentAddress": {
+					"id": 2202,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1254,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1304,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1104,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"presentAddress": {
+					"id": 2203,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1255,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1305,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1105,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"fatherName": "Mr. NoMan",
+				"motherName": "Mrs. NoWoman",
+				"gurdianName": "Mr. Someone",
+				"parentMobibleNo": "01706344583",
+				"batch": {
+					"id": 202,
+					"name": "Valo na",
+					"year": 2100,
+					"admissionYear": 2099,
+					"studentPersonalInfos": null,
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"photo": null,
+				"createdOn": null,
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 853,
+				"fullName": "Alif1323",
+				"studentId": "181-15-334",
+				"currentStatus": "Regular",
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"nid": "554546121564",
+				"birthRegNO": "3497328975374983759837",
+				"dateOfBirth": "1997-08-18",
+				"age": 24,
+				"gender": "Male",
+				"nationality": "Bangladeshi",
+				"bloodGroup": "A+",
+				"maritialStatus": "Single",
+				"permanentAddress": {
+					"id": 2204,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1254,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1304,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1104,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"presentAddress": {
+					"id": 2205,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1255,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1305,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1105,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"fatherName": "Mr. NoMan",
+				"motherName": "Mrs. NoWoman",
+				"gurdianName": "Mr. Someone",
+				"parentMobibleNo": "01706344583",
+				"batch": {
+					"id": 203,
+					"name": "Khub valo",
+					"year": 2100,
+					"admissionYear": 2099,
+					"studentPersonalInfos": null,
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"photo": null,
+				"createdOn": null,
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 854,
+				"fullName": "Alif1323",
+				"studentId": "181-15-334",
+				"currentStatus": "Regular",
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"nid": "554546121564",
+				"birthRegNO": "3497328975374983759837",
+				"dateOfBirth": "1997-08-18",
+				"age": 24,
+				"gender": "Male",
+				"nationality": "Bangladeshi",
+				"bloodGroup": "A+",
+				"maritialStatus": "Single",
+				"permanentAddress": {
+					"id": 2206,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1254,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1304,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1104,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"presentAddress": {
+					"id": 2207,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 1255,
+						"name": "Dhaka",
+						"geocode": "10",
+						"districts": null
+					},
+					"district": {
+						"id": 1305,
+						"name": "Dhaka",
+						"geocode": "1020",
+						"division": null,
+						"upazilas": null
+					},
+					"upazila": {
+						"id": 1105,
+						"name": "Dhanmondi",
+						"geocode": "102030",
+						"district": null
+					},
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"fatherName": "Mr. NoMan",
+				"motherName": "Mrs. NoWoman",
+				"gurdianName": "Mr. Someone",
+				"parentMobibleNo": "01706344583",
+				"batch": {
+					"id": 204,
+					"name": "Motamuti",
+					"year": 2100,
+					"admissionYear": 2099,
+					"studentPersonalInfos": null,
+					"createdOn": "2021-09-14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"photo": null,
+				"createdOn": null,
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+		
+	4. Description:
+	   Endpoint: /api/student/profile/get/855
+	   Method: GET
+	   Response Body:
+		{
+			"id": 855,
+			"fullName": "Alif1323",
+			"studentId": "181-15-334",
+			"currentStatus": "Regular",
+			"cellphone": "01767310339",
+			"email": "alifcse49@gmail.com",
+			"nid": "554546121564",
+			"birthRegNO": "3497328975374983759837",
+			"dateOfBirth": "1997-08-18",
+			"age": 24,
+			"gender": "Male",
+			"nationality": "Bangladeshi",
+			"bloodGroup": "A+",
+			"maritialStatus": "Single",
+			"permanentAddress": {
+				"id": 2208,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1254,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": null
+				},
+				"district": {
+					"id": 1304,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 1104,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"presentAddress": {
+				"id": 2209,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1255,
+					"name": "Dhaka",
+					"geocode": "10",
+					"districts": null
+				},
+				"district": {
+					"id": 1305,
+					"name": "Dhaka",
+					"geocode": "1020",
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 1105,
+					"name": "Dhanmondi",
+					"geocode": "102030",
+					"district": null
+				},
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"fatherName": "Mr. NoMan",
+			"motherName": "Mrs. NoWoman",
+			"gurdianName": "Mr. Someone",
+			"parentMobibleNo": "01706344583",
+			"batch": {
+				"id": 202,
+				"name": "Front Bencher",
+				"year": 2100,
+				"admissionYear": 2099,
+				"studentPersonalInfos": null,
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null,
+				"hibernateLazyInitializer": {}
+			},
+			"photo": null,
+			"createdOn": "2021-09-14",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+		
+	5. Description:
+	   Endpoint: /api/student/profile/delete/855
+	   Method: DELETE
+	   Response Body: Student removed 855!!
+	   
+	   
+	6. Description: Here you can add or not add permanentAddress and presentAddress, it will work fine.
+	   Endpoint: /api/student/profile/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 852,
+			"fullName": "Alif1323",
+			"studentId": "181-15-334",
+			"currentStatus": "Regular",
+			"cellphone": "01767310339",
+			"email": "alifcse49@gmail.com",
+			"nid": "554546121564",
+			"birthRegNO": "3497328975374983759837",
+			"dateOfBirth": "1997-08-18",
+			"age": 24,
+			"gender": "Male",
+			"nationality": "Bangladeshi",
+			"bloodGroup": "A+",
+			"maritialStatus": "Single",
+			"permanentAddress": {
+				"id": 2202,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1254,
+					"name": "Dhaka",
+					"geocode": "10"
+				},
+				"district": {
+					"id": 1304,
+					"name": "Dhaka",
+					"geocode": "1020"
+				},
+				"upazila": {
+					"id": 1104,
+					"name": "Dhanmondi",
+					"geocode": "102030"
+				}
+			},
+			"presentAddress": {
+				"id": 2203,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 1255,
+					"name": "Dhaka",
+					"geocode": "10"
+				},
+				"district": {
+					"id": 1305,
+					"name": "Dhaka",
+					"geocode": "1020"
+				},
+				"upazila": {
+					"id": 1105,
+					"name": "Dhanmondi",
+					"geocode": "102030"
+				},
+				"createdOn": "2021-09-14"
+			},
+			"fatherName": "Mr. NoMan",
+			"motherName": "Mrs. NoWoman",
+			"gurdianName": "Mr. Someone",
+			"parentMobibleNo": "01706344583",
+			"batch": {
+				"id": 205,
+				"name": "Bolods",
+				"year": 2100,
+				"admissionYear": 2099
+			}
+		}	
+	   
+	7. Description:
+	   Endpoint: /api/student/profile/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+	   
+	  
+7. Batch API Description:
+
+	1. Description:
+	   Endpoint: /api/masterdata/institutional/batch/add
+	   Method: POST
+	   Perameter:
+		{
+			"name": "Motamuti",
+			"year": 2100,
+			"admissionYear": 2099
+		}
+		
+		Response Body:
+		{
+			"id": 256,
+			"name": "Motamuti",
+			"year": 2100,
+			"admissionYear": 2099,
+			"studentPersonalInfos": null,
+			"createdOn": "2021-09-14",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+
+	2. Description:
+	   Endpoint: /api/masterdata/institutional/batch/get-all
+	   Method: GET
+	   Perameter:
+		[
+			{
+				"id": 202,
+				"name": "Front Bencher",
+				"year": 2100,
+				"admissionYear": 2099,
+				"studentPersonalInfos": [],
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 203,
+				"name": "Bolods",
+				"year": 2100,
+				"admissionYear": 2099,
+				"studentPersonalInfos": [],
+				"createdOn": "2021-09-14",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+
+	   
+	3. Description:
+	   Endpoint: /api/masterdata/institutional/batch/get/3
+	   Method: GET
+	   Response Body:
+		{
+			"id": 3,
+			"name": "Valo na",
+			"year": 2100,
+			"admissionYear": 2099,
+			"studentPersonalInfos": [
+				{
+					"id": 3,
+					"fullName": "Alif1323",
+					"studentId": "181-15-334",
+					"currentStatus": "Regular",
+					"cellphone": "01767310339",
+					"email": "alifcse49@gmail.com",
+					"nid": "554546121564",
+					"birthRegNO": "3497328975374983759837",
+					"dateOfBirth": "1997-08-18",
+					"age": 24,
+					"gender": "Male",
+					"nationality": "Bangladeshi",
+					"bloodGroup": "A+",
+					"maritialStatus": "Single",
+					"permanentAddress": {
+						"id": 2306,
+						"street": "Kalabagan",
+						"postOffice": "Dhanmondi",
+						"postalCode": "1205",
+						"division": {
+							"id": 1254,
+							"name": "Dhaka",
+							"geocode": "10",
+							"districts": []
+						},
+						"district": {
+							"id": 1304,
+							"name": "Dhaka",
+							"geocode": "1020",
+							"division": null,
+							"upazilas": []
+						},
+						"upazila": {
+							"id": 1104,
+							"name": "Dhanmondi",
+							"geocode": "102030",
+							"district": null
+						},
+						"createdOn": "2021-09-14",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					"presentAddress": {
+						"id": 2307,
+						"street": "Kalabagan",
+						"postOffice": "Dhanmondi",
+						"postalCode": "1205",
+						"division": {
+							"id": 1255,
+							"name": "Dhaka",
+							"geocode": "10",
+							"districts": []
+						},
+						"district": {
+							"id": 1305,
+							"name": "Dhaka",
+							"geocode": "1020",
+							"division": null,
+							"upazilas": []
+						},
+						"upazila": {
+							"id": 1105,
+							"name": "Dhanmondi",
+							"geocode": "102030",
+							"district": null
+						},
+						"createdOn": "2021-09-14",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					"fatherName": "Mr. NoMan",
+					"motherName": "Mrs. NoWoman",
+					"gurdianName": "Mr. Someone",
+					"parentMobibleNo": "01706344583",
+					"batch": null,
+					"photo": null,
+					"createdOn": null,
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				{
+					"id": 5,
+					"fullName": "Alif1323",
+					"studentId": "181-15-334",
+					"currentStatus": "Regular",
+					"cellphone": "01767310339",
+					"email": "alifcse49@gmail.com",
+					"nid": "554546121564",
+					"birthRegNO": "3497328975374983759837",
+					"dateOfBirth": "1997-08-18",
+					"age": 24,
+					"gender": "Male",
+					"nationality": "Bangladeshi",
+					"bloodGroup": "A+",
+					"maritialStatus": "Single",
+					"permanentAddress": {
+						"id": 2310,
+						"street": "Kalabagan",
+						"postOffice": "Dhanmondi",
+						"postalCode": "1205",
+						"division": {
+							"id": 1254,
+							"name": "Dhaka",
+							"geocode": "10",
+							"districts": []
+						},
+						"district": {
+							"id": 1304,
+							"name": "Dhaka",
+							"geocode": "1020",
+							"division": null,
+							"upazilas": []
+						},
+						"upazila": {
+							"id": 1104,
+							"name": "Dhanmondi",
+							"geocode": "102030",
+							"district": null
+						},
+						"createdOn": "2021-09-14",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					"presentAddress": {
+						"id": 2311,
+						"street": "Kalabagan",
+						"postOffice": "Dhanmondi",
+						"postalCode": "1205",
+						"division": {
+							"id": 1255,
+							"name": "Dhaka",
+							"geocode": "10",
+							"districts": []
+						},
+						"district": {
+							"id": 1305,
+							"name": "Dhaka",
+							"geocode": "1020",
+							"division": null,
+							"upazilas": []
+						},
+						"upazila": {
+							"id": 1105,
+							"name": "Dhanmondi",
+							"geocode": "102030",
+							"district": null
+						},
+						"createdOn": "2021-09-14",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					"fatherName": "Mr. NoMan",
+					"motherName": "Mrs. NoWoman",
+					"gurdianName": "Mr. Someone",
+					"parentMobibleNo": "01706344583",
+					"batch": null,
+					"photo": null,
+					"createdOn": null,
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				{
+					"id": 6,
+					"fullName": "Alif1323",
+					"studentId": "181-15-334",
+					"currentStatus": "Regular",
+					"cellphone": "01767310339",
+					"email": "alifcse49@gmail.com",
+					"nid": "554546121564",
+					"birthRegNO": "3497328975374983759837",
+					"dateOfBirth": "1997-08-18",
+					"age": 24,
+					"gender": "Male",
+					"nationality": "Bangladeshi",
+					"bloodGroup": "A+",
+					"maritialStatus": "Single",
+					"permanentAddress": {
+						"id": 2312,
+						"street": "Kalabagan",
+						"postOffice": "Dhanmondi",
+						"postalCode": "1205",
+						"division": {
+							"id": 1254,
+							"name": "Dhaka",
+							"geocode": "10",
+							"districts": []
+						},
+						"district": {
+							"id": 1304,
+							"name": "Dhaka",
+							"geocode": "1020",
+							"division": null,
+							"upazilas": []
+						},
+						"upazila": {
+							"id": 1104,
+							"name": "Dhanmondi",
+							"geocode": "102030",
+							"district": null
+						},
+						"createdOn": "2021-09-14",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					"presentAddress": {
+						"id": 2313,
+						"street": "Kalabagan",
+						"postOffice": "Dhanmondi",
+						"postalCode": "1205",
+						"division": {
+							"id": 1255,
+							"name": "Dhaka",
+							"geocode": "10",
+							"districts": []
+						},
+						"district": {
+							"id": 1305,
+							"name": "Dhaka",
+							"geocode": "1020",
+							"division": null,
+							"upazilas": []
+						},
+						"upazila": {
+							"id": 1105,
+							"name": "Dhanmondi",
+							"geocode": "102030",
+							"district": null
+						},
+						"createdOn": "2021-09-14",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					"fatherName": "Mr. NoMan",
+					"motherName": "Mrs. NoWoman",
+					"gurdianName": "Mr. Someone",
+					"parentMobibleNo": "01706344583",
+					"batch": null,
+					"photo": null,
+					"createdOn": null,
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				}
+			],
+			"createdOn": "2021-09-14",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+		
+		
+	4. Description:
+	   Endpoint: /api/masterdata/institutional/batch/delete/3
+	   Method: DELETE
+	   Response Body: Batch removed 3!!
+	   
+	   
+	5. Description:
+	   Endpoint: /api/masterdata/institutional/batch/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 1,
+			"name": "Kharap na",
+			"year": 2100,
+			"admissionYear": 2099
+		}
+	   
+	6. Description:
+	   Endpoint: /api/masterdata/institutional/batch/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+	
+
+	
+8. Phase API Description:
+
+	1. Description:
+	   Endpoint: /api/masterdata/institutional/phase/add
+	   Method: POST
+	   Perameter:
+		{
+			"name" : "Phase - 1",
+			"year" : 3030
+		}
+		
+		Response Body:
+		{
+			"id": 1,
+			"name": "Phase - 1",
+			"year": 3030,
+			"subjects": null,
+			"createdOn": "2021-09-15 22:22:13",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+
+
+	2. Description:
+	   Endpoint: /api/masterdata/institutional/phase/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"name" : "Phase - 2",
+				"year" : 3031
+			},
+			{
+				"name" : "Phase - 3",
+				"year" : 3032
+			}
+		]
+		
+		Response Body:
+		[
+			{
+				"id": 52,
+				"name": "Phase - 2",
+				"year": 3031,
+				"subjects": null,
+				"createdOn": "2021-09-15 22:33:43",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 53,
+				"name": "Phase - 3",
+				"year": 3032,
+				"subjects": null,
+				"createdOn": "2021-09-15 22:33:43",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+		
+	3. Description:
+	   Endpoint: /api/masterdata/institutional/phase/get-all
+	   Method: GET
+	   Perameter:
+		[
+			{
+				"id": 102,
+				"name": "Phase - 1",
+				"year": 3031,
+				"subjects": [
+					{
+						"id": 152,
+						"name": "AA1",
+						"code": "BCB1",
+						"department": {
+							"id": 102,
+							"name": "B3",
+							"code": "BCB",
+							"subjects": null,
+							"head": null,
+							"createdOn": "2021-09-16 06:21:25",
+							"createdBy": null,
+							"modifiedOn": null,
+							"modifiedBy": null,
+							"hibernateLazyInitializer": {}
+						},
+						"phase": null,
+						"parts": [],
+						"createdOn": "2021-09-16 07:12:40",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					{
+						"id": 202,
+						"name": "AA1",
+						"code": "BCB1",
+						"department": {
+							"id": 253,
+							"name": "B1",
+							"code": "BCD",
+							"subjects": null,
+							"head": {
+								"id": 1,
+								"firstName": "Dr.",
+								"lastName": "Gorib",
+								"dateOfBirth": "1999-09-05",
+								"age": 22,
+								"gender": "Male",
+								"nid": null,
+								"permanentAddress": null,
+								"presentAddress": null,
+								"cellphone": "01767310339",
+								"email": "alifcse49@gmail.com",
+								"photo": null,
+								"createdOn": "2021-09-16 06:26:47",
+								"createdBy": null,
+								"modifiedOn": null,
+								"modifiedBy": null
+							},
+							"createdOn": "2021-09-16 06:50:00",
+							"createdBy": null,
+							"modifiedOn": null,
+							"modifiedBy": null,
+							"hibernateLazyInitializer": {}
+						},
+						"phase": null,
+						"parts": [],
+						"createdOn": "2021-09-16 07:19:46",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					}
+				],
+				"createdOn": "2021-09-16 05:33:23",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 103,
+				"name": "Phase - 2",
+				"year": 3032,
+				"subjects": [],
+				"createdOn": "2021-09-16 05:33:23",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+
+	   
+	4. Description:
+	   Endpoint: /api/masterdata/institutional/phase/get/102
+	   Method: GET
+	   Response Body:
+		{
+			"id": 102,
+			"name": "Phase - 1",
+			"year": 3031,
+			"subjects": [
+				{
+					"id": 1,
+					"name": "AA1",
+					"code": "BCB1",
+					"department": {
+						"id": 102,
+						"name": "B3",
+						"code": "BCB",
+						"subjects": null,
+						"head": null,
+						"createdOn": "2021-09-16 06:21:25",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"phase": null,
+					"parts": [],
+					"createdOn": "2021-09-16 07:01:14",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				{
+					"id": 202,
+					"name": "AA1",
+					"code": "BCB1",
+					"department": {
+						"id": 253,
+						"name": "B1",
+						"code": "BCD",
+						"subjects": null,
+						"head": {
+							"id": 1,
+							"firstName": "Dr.",
+							"lastName": "Gorib",
+							"dateOfBirth": "1999-09-05",
+							"age": 22,
+							"gender": "Male",
+							"nid": null,
+							"permanentAddress": null,
+							"presentAddress": null,
+							"cellphone": "01767310339",
+							"email": "alifcse49@gmail.com",
+							"photo": null,
+							"createdOn": "2021-09-16 06:26:47",
+							"createdBy": null,
+							"modifiedOn": null,
+							"modifiedBy": null
+						},
+						"createdOn": "2021-09-16 06:50:00",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"phase": null,
+					"parts": [],
+					"createdOn": "2021-09-16 07:19:46",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				}
+			],
+			"createdOn": "2021-09-16 05:33:23",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+		
+		
+	5. Description:
+	   Endpoint: /api/masterdata/institutional/phase/delete/102
+	   Method: DELETE
+	   Response Body: Phase removed 102!!
+	   
+	   
+	6. Description:
+	   Endpoint: /api/masterdata/institutional/phase/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 103,
+			"name": "Phase - 3",
+			"year": 3032
+		}
+	   
+	7. Description:
+	   Endpoint: /api/masterdata/institutional/phase/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+
+
+
+9. Department API Description:
+
+	1. Description: Here you can add or not add department head, it will work fine.
+	   Endpoint: /api/masterdata/institutional/department/add
+	   Method: POST
+	   Perameter:
+		{
+			"name" : "C3",
+			"code" : "BCB"
+		}
+		
+		Response Body:
+		{
+			"id": 153,
+			"name": "C3",
+			"code": "BCB",
+			"subjects": null,
+			"head": null,
+			"createdOn": "2021-09-16 06:33:31",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+
+
+	2. Description: Here you can add or not add department head, it will work fine.
+	   Endpoint: /api/masterdata/institutional/department/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"name" : "A1",
+				"code" : "ABC",
+				"head" : {
+					"id" : 1
+				}
+			},
+			{
+				"name" : "B1",
+				"code" : "BCD"
+			}
+		]
+
+		
+		Response Body:
+		[
+			{
+				"id": 254,
+				"name": "A1",
+				"code": "ABC",
+				"subjects": null,
+				"head": {
+					"id": 1,
+					"firstName": "Dr.",
+					"lastName": "Gorib",
+					"dateOfBirth": "1999-09-05",
+					"age": 22,
+					"gender": "Male",
+					"nid": null,
+					"permanentAddress": null,
+					"presentAddress": null,
+					"cellphone": "01767310339",
+					"email": "alifcse49@gmail.com",
+					"photo": null,
+					"createdOn": "2021-09-16 06:26:47",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 06:50:29",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 255,
+				"name": "B1",
+				"code": "BCD",
+				"subjects": null,
+				"head": null,
+				"createdOn": "2021-09-16 06:50:29",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+		
+	3. Description:
+	   Endpoint: /api/masterdata/institutional/department/get-all
+	   Method: GET
+	   Perameter:
+		[
+			{
+				"id": 102,
+				"name": "B3",
+				"code": "BCB",
+				"subjects": [
+					{
+						"id": 1,
+						"name": "AA1",
+						"code": "BCB1",
+						"department": null,
+						"phase": {
+							"id": 102,
+							"name": "Phase - 1",
+							"year": 3031,
+							"subjects": null,
+							"createdOn": "2021-09-16 05:33:23",
+							"createdBy": null,
+							"modifiedOn": null,
+							"modifiedBy": null,
+							"hibernateLazyInitializer": {}
+						},
+						"parts": [],
+						"createdOn": "2021-09-16 07:01:14",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					{
+						"id": 52,
+						"name": "AA1",
+						"code": "BCB1",
+						"department": null,
+						"phase": {
+							"id": 102,
+							"name": "Phase - 1",
+							"year": 3031,
+							"subjects": null,
+							"createdOn": "2021-09-16 05:33:23",
+							"createdBy": null,
+							"modifiedOn": null,
+							"modifiedBy": null,
+							"hibernateLazyInitializer": {}
+						},
+						"parts": [],
+						"createdOn": "2021-09-16 07:04:09",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					}
+				],
+				"head": null,
+				"createdOn": "2021-09-16 06:21:25",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+			{
+				"id": 252,
+				"name": "A1",
+				"code": "ABC",
+				"subjects": [],
+				"head": {
+					"id": 1,
+					"firstName": "Dr.",
+					"lastName": "Gorib",
+					"dateOfBirth": "1999-09-05",
+					"age": 22,
+					"gender": "Male",
+					"nid": null,
+					"permanentAddress": null,
+					"presentAddress": null,
+					"cellphone": "01767310339",
+					"email": "alifcse49@gmail.com",
+					"photo": null,
+					"createdOn": "2021-09-16 06:26:47",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 06:50:00",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 253,
+				"name": "B1",
+				"code": "BCD",
+				"subjects": [
+					{
+						"id": 202,
+						"name": "AA1",
+						"code": "BCB1",
+						"department": null,
+						"phase": {
+							"id": 102,
+							"name": "Phase - 1",
+							"year": 3031,
+							"subjects": null,
+							"createdOn": "2021-09-16 05:33:23",
+							"createdBy": null,
+							"modifiedOn": null,
+							"modifiedBy": null,
+							"hibernateLazyInitializer": {}
+						},
+						"parts": [],
+						"createdOn": "2021-09-16 07:19:46",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					}
+				],
+				"head": {
+					"id": 1,
+					"firstName": "Dr.",
+					"lastName": "Gorib",
+					"dateOfBirth": "1999-09-05",
+					"age": 22,
+					"gender": "Male",
+					"nid": null,
+					"permanentAddress": null,
+					"presentAddress": null,
+					"cellphone": "01767310339",
+					"email": "alifcse49@gmail.com",
+					"photo": null,
+					"createdOn": "2021-09-16 06:26:47",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 06:50:00",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+
+	   
+	4. Description:
+	   Endpoint: /api/masterdata/institutional/department/get/253
+	   Method: GET
+	   Response Body:
+		{
+			"id": 253,
+			"name": "B1",
+			"code": "BCD",
+			"subjects": [
+				{
+					"id": 202,
+					"name": "AA1",
+					"code": "BCB1",
+					"department": null,
+					"phase": {
+						"id": 102,
+						"name": "Phase - 1",
+						"year": 3031,
+						"subjects": null,
+						"createdOn": "2021-09-16 05:33:23",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"parts": [],
+					"createdOn": "2021-09-16 07:19:46",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				}
+			],
+			"head": {
+				"id": 1,
+				"firstName": "Dr.",
+				"lastName": "Gorib",
+				"dateOfBirth": "1999-09-05",
+				"age": 22,
+				"gender": "Male",
+				"nid": null,
+				"permanentAddress": null,
+				"presentAddress": null,
+				"cellphone": "01767310339",
+				"email": "alifcse49@gmail.com",
+				"photo": null,
+				"createdOn": "2021-09-16 06:26:47",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"createdOn": "2021-09-16 06:50:00",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+		
+		
+	5. Description:
+	   Endpoint: /api/masterdata/institutional/department/delete/102
+	   Method: DELETE
+	   Response Body: Department removed 102!!
+	   
+	   
+	6. Description: Here you can add or not add department head, it will work fine.
+	   Endpoint: /api/masterdata/institutional/department/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 253,
+			"name": "W1",
+			"code": "BCD2",
+			"head": {
+				"id" : 52
+			}
+		}
+	   
+	7. Description: 
+	   Endpoint: /api/masterdata/institutional/department/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+
+
+
+10. Part API Description:
+
+	1. Description: we must have subject id as object
+	   Endpoint: /api/masterdata/institutional/part/add
+	   Method: POST
+		{
+			"name" : "A60",
+			"subject": {
+				"id" : 302
+			}
+		}
+		
+		Response Body:
+		{
+			"id": 102,
+			"name": "A60",
+			"subject": {
+				"id": 302,
+				"name": "AA1",
+				"code": "BCB1",
+				"department": {
+					"id": 302,
+					"name": "A1",
+					"code": "ABC",
+					"subjects": null,
+					"head": null,
+					"createdOn": "2021-09-16 08:33:06",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"phase": {
+					"id": 152,
+					"name": "Phase - 2",
+					"year": 3031,
+					"subjects": null,
+					"createdOn": "2021-09-16 08:32:20",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"parts": null,
+				"createdOn": "2021-09-16 09:23:23",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"createdOn": "2021-09-16 10:16:23",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+
+
+	2. Description: we must have subject id as object
+	   Endpoint: /api/masterdata/institutional/part/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"name" : "A90",
+				"subject": {
+					"id" : 303
+				}
+			},
+			{
+				"name" : "A80",
+				"subject": {
+					"id" : 303
+				}
+			}
+		]
+
+		
+		Response Body:
+		[
+			{
+				"id": 103,
+				"name": "A90",
+				"subject": {
+					"id": 303,
+					"name": "BB1",
+					"code": "CBC1",
+					"department": {
+						"id": 303,
+						"name": "B1",
+						"code": "BCD",
+						"subjects": null,
+						"head": null,
+						"createdOn": "2021-09-16 08:33:06",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"phase": {
+						"id": 153,
+						"name": "Phase - 3",
+						"year": 3032,
+						"subjects": null,
+						"createdOn": "2021-09-16 08:32:20",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"parts": null,
+					"createdOn": "2021-09-16 09:23:23",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 10:22:00",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 104,
+				"name": "A80",
+				"subject": {
+					"id": 303,
+					"name": "BB1",
+					"code": "CBC1",
+					"department": {
+						"id": 303,
+						"name": "B1",
+						"code": "BCD",
+						"subjects": null,
+						"head": null,
+						"createdOn": "2021-09-16 08:33:06",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"phase": {
+						"id": 153,
+						"name": "Phase - 3",
+						"year": 3032,
+						"subjects": null,
+						"createdOn": "2021-09-16 08:32:20",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"parts": null,
+					"createdOn": "2021-09-16 09:23:23",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 10:22:00",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+		
+	3. Description:
+	   Endpoint: /api/masterdata/institutional/part/get-all
+	   Method: GET
+	   Perameter:
+		[
+			{
+				"id": 103,
+				"name": "A90",
+				"subject": {
+					"id": 303,
+					"name": "BB1",
+					"code": "CBC1",
+					"department": {
+						"id": 303,
+						"name": "B1",
+						"code": "BCD",
+						"subjects": null,
+						"head": null,
+						"createdOn": "2021-09-16 08:33:06",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"phase": {
+						"id": 153,
+						"name": "Phase - 3",
+						"year": 3032,
+						"subjects": null,
+						"createdOn": "2021-09-16 08:32:20",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"parts": null,
+					"createdOn": "2021-09-16 09:23:23",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 10:22:00",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 104,
+				"name": "A80",
+				"subject": {
+					"id": 303,
+					"name": "BB1",
+					"code": "CBC1",
+					"department": {
+						"id": 303,
+						"name": "B1",
+						"code": "BCD",
+						"subjects": null,
+						"head": null,
+						"createdOn": "2021-09-16 08:33:06",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"phase": {
+						"id": 153,
+						"name": "Phase - 3",
+						"year": 3032,
+						"subjects": null,
+						"createdOn": "2021-09-16 08:32:20",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null,
+						"hibernateLazyInitializer": {}
+					},
+					"parts": null,
+					"createdOn": "2021-09-16 09:23:23",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 10:22:00",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+
+	   
+	4. Description:
+	   Endpoint: /api/masterdata/institutional/subject/get/52
+	   Method: GET
+	   Response Body:
+		{
+			"id": 52,
+			"name": "A10",
+			"subject": {
+				"id": 302,
+				"name": "AA1",
+				"code": "BCB1",
+				"department": {
+					"id": 302,
+					"name": "A1",
+					"code": "ABC",
+					"subjects": null,
+					"head": null,
+					"createdOn": "2021-09-16 08:33:06",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"phase": {
+					"id": 152,
+					"name": "Phase - 2",
+					"year": 3031,
+					"subjects": null,
+					"createdOn": "2021-09-16 08:32:20",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"parts": null,
+				"createdOn": "2021-09-16 09:23:23",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null,
+				"hibernateLazyInitializer": {}
+			},
+			"createdOn": "2021-09-16 00:00:00",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+		
+		
+	5. Description:
+	   Endpoint: /api/masterdata/institutional/part/delete/52
+	   Method: DELETE
+	   Response Body: Part removed 52!!
+	   
+	   
+	6. Description: we must have subject id as object.
+	   Endpoint: /api/masterdata/institutional/part/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 53,
+			"name": "A50",
+			"subject": {
+				"id": 302
+			}
+		}
+	   
+	7. Description:
+	   Endpoint: /api/masterdata/institutional/subject/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+
+
+11. Subject API Description:
+
+	1. Description: you must have department and phase id as object.
+	   Endpoint: /api/masterdata/institutional/subject/add
+	   Method: POST
+	   Perameter:
+		{
+			"name" : "AA1",
+			"code" : "BCB1",
+			"department" : {
+				"id" : 253
+			},
+			"phase" : {
+				"id" : 102
+			}
+		}
+		
+		Response Body:
+		{
+			"id": 202,
+			"name": "AA1",
+			"code": "BCB1",
+			"department": {
+				"id": 253,
+				"name": "B1",
+				"code": "BCD",
+				"subjects": null,
+				"head": {
+					"id": 1,
+					"firstName": "Dr.",
+					"lastName": "Gorib",
+					"dateOfBirth": "1999-09-05",
+					"age": 22,
+					"gender": "Male",
+					"nid": null,
+					"permanentAddress": null,
+					"presentAddress": null,
+					"cellphone": "01767310339",
+					"email": "alifcse49@gmail.com",
+					"photo": null,
+					"createdOn": "2021-09-16 06:26:47",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"createdOn": "2021-09-16 06:50:00",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"phase": {
+				"id": 102,
+				"name": "Phase - 1",
+				"year": 3031,
+				"subjects": null,
+				"createdOn": "2021-09-16 05:33:23",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"parts": null,
+			"createdOn": "2021-09-16 07:19:46",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+
+
+	2. Description: you must have department and phase id as object.
+	   Endpoint: /api/masterdata/institutional/subject/add-all
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"name" : "AA1",
+				"code" : "BCB1",
+				"department" : {
+					"id" : 102
+				},
+				"phase" : {
+					"id" : 102
+				}
+			},
+			{
+				"name" : "BB1",
+				"code" : "CBC1",
+				"department" : {
+					"id" : 102
+				},
+				"phase" : {
+					"id" : 102
+				}
+			}
+		]
+
+		
+		Response Body:
+		[
+			{
+				"id": 152,
+				"name": "AA1",
+				"code": "BCB1",
+				"department": {
+					"id": 102,
+					"name": "B3",
+					"code": "BCB",
+					"subjects": null,
+					"head": null,
+					"createdOn": "2021-09-16 06:21:25",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"phase": {
+					"id": 102,
+					"name": "Phase - 1",
+					"year": 3031,
+					"subjects": null,
+					"createdOn": "2021-09-16 05:33:23",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"parts": null,
+				"createdOn": "2021-09-16 07:12:40",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 153,
+				"name": "BB1",
+				"code": "CBC1",
+				"department": {
+					"id": 102,
+					"name": "B3",
+					"code": "BCB",
+					"subjects": null,
+					"head": null,
+					"createdOn": "2021-09-16 06:21:25",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"phase": {
+					"id": 102,
+					"name": "Phase - 1",
+					"year": 3031,
+					"subjects": null,
+					"createdOn": "2021-09-16 05:33:23",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"parts": null,
+				"createdOn": "2021-09-16 07:12:40",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+		
+	3. Description:
+	   Endpoint: /api/masterdata/institutional/subject/get-all
+	   Method: GET
+	   Perameter:
+		[
+			{
+				"id": 302,
+				"name": "AA1",
+				"code": "BCB1",
+				"department": {
+					"id": 302,
+					"name": "A1",
+					"code": "ABC",
+					"subjects": null,
+					"head": null,
+					"createdOn": "2021-09-16 08:33:06",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"phase": {
+					"id": 152,
+					"name": "Phase - 2",
+					"year": 3031,
+					"subjects": null,
+					"createdOn": "2021-09-16 08:32:20",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"parts": [
+					{
+						"id": 52,
+						"name": "A10",
+						"subject": null,
+						"createdOn": "2021-09-16 00:00:00",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					{
+						"id": 53,
+						"name": "A50",
+						"subject": null,
+						"createdOn": "2021-09-16 00:00:00",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					{
+						"id": 102,
+						"name": "A60",
+						"subject": null,
+						"createdOn": "2021-09-16 00:00:00",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					}
+				],
+				"createdOn": "2021-09-16 09:23:23",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			{
+				"id": 303,
+				"name": "BB1",
+				"code": "CBC1",
+				"department": {
+					"id": 303,
+					"name": "B1",
+					"code": "BCD",
+					"subjects": null,
+					"head": null,
+					"createdOn": "2021-09-16 08:33:06",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"phase": {
+					"id": 153,
+					"name": "Phase - 3",
+					"year": 3032,
+					"subjects": null,
+					"createdOn": "2021-09-16 08:32:20",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null,
+					"hibernateLazyInitializer": {}
+				},
+				"parts": [
+					{
+						"id": 103,
+						"name": "A90",
+						"subject": null,
+						"createdOn": "2021-09-16 00:00:00",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					},
+					{
+						"id": 104,
+						"name": "A80",
+						"subject": null,
+						"createdOn": "2021-09-16 00:00:00",
+						"createdBy": null,
+						"modifiedOn": null,
+						"modifiedBy": null
+					}
+				],
+				"createdOn": "2021-09-16 09:23:23",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			}
+		]
+
+	   
+	4. Description:
+	   Endpoint: /api/masterdata/institutional/subject/get/302
+	   Method: GET
+	   Response Body:
+		{
+			"id": 302,
+			"name": "AA1",
+			"code": "BCB1",
+			"department": {
+				"id": 302,
+				"name": "A1",
+				"code": "ABC",
+				"subjects": null,
+				"head": null,
+				"createdOn": "2021-09-16 08:33:06",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null,
+				"hibernateLazyInitializer": {}
+			},
+			"phase": {
+				"id": 152,
+				"name": "Phase - 2",
+				"year": 3031,
+				"subjects": null,
+				"createdOn": "2021-09-16 08:32:20",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null,
+				"hibernateLazyInitializer": {}
+			},
+			"parts": [
+				{
+					"id": 52,
+					"name": "A10",
+					"subject": null,
+					"createdOn": "2021-09-16 00:00:00",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				{
+					"id": 53,
+					"name": "A50",
+					"subject": null,
+					"createdOn": "2021-09-16 00:00:00",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				{
+					"id": 102,
+					"name": "A60",
+					"subject": null,
+					"createdOn": "2021-09-16 00:00:00",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				}
+			],
+			"createdOn": "2021-09-16 09:23:23",
+			"createdBy": null,
+			"modifiedOn": null,
+			"modifiedBy": null
+		}
+		
+		
+	5. Description:
+	   Endpoint: /api/masterdata/institutional/subject/delete/252
+	   Method: DELETE
+	   Response Body: Subject removed 252!!
+	   
+	   
+	6. Description: you must have department and phase id as object.
+	   Endpoint: /api/masterdata/institutional/subject/update
+	   Method: PUT
+	   Perameter:
+		{
+			"id": 253,
+			"name": "CCC434",
+			"code": "FDSGD",
+			"department": {
+				"id": 302
+			},
+			"phase": {
+				"id": 152
+			}
+		}
+	   
+	7. Description:
+	   Endpoint: /api/masterdata/institutional/subject/delete-all
+	   Method: DELETE
+	   Response Body: Successfully delete all entities!!!
+
+
+
+
+############################### Institute API ##############################################
+
+12. Institute API Description:
+	i) Description: Add a new institute.
+	   Endpoint: /api/masterdata/institution/add
+	   Method: POST
+	   Perameter:
+		{
+    		"name": "Rajshahi Med college",
+    		"slogan": "Center of Excellence in Higher Study",
+    		"address": {
+				"street" : "Kalabagan",
+				"postOffice" : "Dhanmondi",
+				"postalCode" : "1205",
+				"division" : {
+					"id" : 0
+				},
+				"district" : {
+					"id" : 0
+				},
+				"upazila" : {
+					"id" : 0
+				}
+			},
+			"officeEmail": "registrar@northsouth.edu",
+			"officeCellPhone": 251048,
+			"fax": 55668200,
+			"website": "www.nothsouth.edu"
+
+		}
+	   Response Body:
+		{
+			"institutionId": 5,
+			"name": "Rajshahi Med college",
+			"slogan": "Center of Excellence in Higher Study",
+			"address": {
+				"id": 304,
+				"street": "Kalabagan",
+				"postOffice": "Dhanmondi",
+				"postalCode": "1205",
+				"division": {
+					"id": 0,
+					"name": null,
+					"geocode": null,
+					"districts": null
+				},
+				"district": {
+					"id": 0,
+					"name": null,
+					"geocode": null,
+					"division": null,
+					"upazilas": null
+				},
+				"upazila": {
+					"id": 0,
+					"name": null,
+					"geocode": null,
+					"district": null
+				},
+				"createdOn": "2021-09-16 22:43:53",
+				"createdBy": null,
+				"modifiedOn": null,
+				"modifiedBy": null
+			},
+			"officeEmail": "registrar@northsouth.edu",
+			"officeCellPhone": 251048,
+			"fax": 55668200,
+			"website": "www.nothsouth.edu",
+			"createdOn": "2021-09-16 22:43:53",
+			"createdBy": null,
+			"modifiedOn": "2021-09-16 22:43:53",
+			"modifiedBy": null
+		}
+
+    ii) Description: get all institute.
+		Endpoint: /api/masterdata/institution/get/all
+		Method: GET
+		Response Body:
+		[
+			{
+				"institutionId": 3,
+				"name": "Mymensingh Med college",
+				"slogan": "Center of Excellence in Higher Study",
+				"address": {
+					"id": 302,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"districts": []
+					},
+					"district": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"division": null,
+						"upazilas": []
+					},
+					"upazila": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"district": null
+					},
+					"createdOn": "2021-09-16 22:40:43",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"officeEmail": "registrar@northsouth.edu",
+				"officeCellPhone": 251048,
+				"fax": 55668200,
+				"website": "www.nothsouth.edu",
+				"createdOn": "2021-09-16 00:00:00",
+				"createdBy": null,
+				"modifiedOn": "2021-09-16 00:00:00",
+				"modifiedBy": null
+   	 		},
+    		{
+				"institutionId": 4,
+				"name": "Rajshahi Med college",
+				"slogan": "Center of Excellence in Higher Study",
+				"address": {
+					"id": 303,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"districts": []
+					},
+					"district": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"division": null,
+						"upazilas": []
+					},
+					"upazila": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"district": null
+					},
+					"createdOn": "2021-09-16 22:40:57",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"officeEmail": "registrar@northsouth.edu",
+				"officeCellPhone": 251048,
+				"fax": 55668200,
+				"website": "www.nothsouth.edu",
+				"createdOn": "2021-09-16 00:00:00",
+				"createdBy": null,
+				"modifiedOn": "2021-09-16 00:00:00",
+				"modifiedBy": null			
+    		}
+		]
+
+    iii) Description: Get institute by ID
+		 Endpoint: /api/masterdata/institution/get/5
+		 Method: GET
+		 Response Body:
+		    {
+				"institutionId": 5,
+				"name": "Rajshahi Med college",
+				"slogan": "Center of Excellence in Higher Study",
+				"address": {
+					"id": 304,
+					"street": "Kalabagan",
+					"postOffice": "Dhanmondi",
+					"postalCode": "1205",
+					"division": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"districts": []
+					},
+					"district": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"division": null,
+						"upazilas": []
+					},
+					"upazila": {
+						"id": 0,
+						"name": null,
+						"geocode": null,
+						"district": null
+					},
+					"createdOn": "2021-09-16 22:43:53",
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				"officeEmail": "registrar@northsouth.edu",
+				"officeCellPhone": 251048,
+				"fax": 55668200,
+				"website": "www.nothsouth.edu",
+				"createdOn": "2021-09-16 00:00:00",
+				"createdBy": null,
+				"modifiedOn": "2021-09-16 00:00:00",
+				"modifiedBy": null
+			}
+		
+	 iv) Description: Update a institute information by ID
+		 Endpoint: /api/masterdata/institution/update/3
+		 Method: PUT
+		 ResponseBody:
+		    {
+    			"institutionId": 3,
+    			"name": Dhaka Med college",
+    			"slogan": "Center of Excellence in Higher Study",
+    			"address": {
+        			"id": 2502,
+        			"street": "Kalabagan",
+        			"postOffice": "Dhanmondi",
+        			"postalCode": "1205",
+        		"division": {
+            			"id": 1552,
+            			"name": null,
+            			"geocode": null,
+            			"districts": null
+        		},
+        		"district": {
+            			"id": 1602,
+            			"name": null,
+            			"geocode": null,
+            			"division": null,
+            			"upazilas": null
+        		},
+        		"upazila": {
+            			"id": 1402,
+            			"name": null,
+            			"geocode": null,
+            			"district": null
+        		},
+        		"createdOn": "2021-09-14",
+        		"createdBy": null,
+        		"modifiedOn": null,
+        		"modifiedBy": null
+    			},
+    			"officeEmail": "registrar@northsouth.edu",
+    			"officeCellPhone": 251048,
+    			"fax": 55668200,
+    			"website": "www.nothsouth.edu",
+    			"createdOn": null,
+    			"createdBy": null,
+    			"modifiedOn": null,
+    			"modifiedBy": null
+		}
+
+	  v) Description: delete institute by specific id.
+		 Endpoint: /api/masterdata/institution/delete/3
+		 Method: DLETE
+		 ResponseBody:
+
+	 vi) Description: can delete all institute 
+		 Endpoint: /api/masterdata/institution/delete/all
+		 Method: DLETE
+		 ResponseBody:
+
+############################### Section API ##############################################
+
+13. Section API Description:
+	i) Description: Can add a new section.
+	   Endpoint: /api/Section/add
+	   Method: POST
+	   Perameter:
+		{
+			"sectionName": "lutas-10",
+			"session": "2021",
+			"roomNo": "sac201"
+		}
+	   Response Body:
+		{
+			"sectionId": 12,
+			"sectionName": "lutas-10",
+			"session": "2021",
+			"roomNo": "sac201",
+			"createdOn": "2021-09-16 23:46:00",
+			"createdBy": null,
+			"modifiedOn": "2021-09-16 23:46:00",
+			"modifiedBy": null
+		}
+	ii) Description: Can add List of new section.
+	   Endpoint: /api/Section/add/list
+	   Method: POST
+	   Perameter:
+		[
+			{
+				"sectionName": "lilly-2",
+				"session": "2021",
+				"roomNo": "sac201"
+			},
+			{
+				"sectionName": "Lilly-3",
+				"session": "2021",
+				"roomNo": "sac201"
+			}
+		]
+	   Response Body:
+		[
+			{
+				"sectionId": 13,
+				"sectionName": "lilly-2",
+				"session": "2021",
+				"roomNo": "sac201",
+				"createdOn": "2021-09-16 23:51:15",
+				"createdBy": null,
+				"modifiedOn": "2021-09-16 23:51:15",
+				"modifiedBy": null
+			},
+			{
+				"sectionId": 14,
+				"sectionName": "Lilly-3",
+				"session": "2021",
+				"roomNo": "sac201",
+				"createdOn": "2021-09-16 23:51:15",
+				"createdBy": null,
+				"modifiedOn": "2021-09-16 23:51:15",
+				"modifiedBy": null
+			}
+		]
+	iii) Description: Can get a list of all section.
+		Endpoint: /api/masterdata/institution/get/all
+		Method: GET
+		Response Body:
+			[
+				{
+					"sectionId": 4,
+					"sectionName": "lutas-3",
+					"session": "2021",
+					"roomNo": "nac101",
+					"createdOn": null,
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				{
+					"sectionId": 5,
+					"sectionName": "lutas-5",
+					"session": "2021",
+					"roomNo": "nac101",
+					"createdOn": null,
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				},
+				{
+					"sectionId": 6,
+					"sectionName": "lutas-5",
+					"session": "2021",
+					"roomNo": "nac101",
+					"createdOn": null,
+					"createdBy": null,
+					"modifiedOn": null,
+					"modifiedBy": null
+				}
+			]
+
+	iv)  Description: Get a sepecific section by ID
+		 Endpoint: /api/Section/get/13
+		 Method: GET
+		 Response Body:
+		    {
+				"sectionId": 13,
+				"sectionName": "lilly-2",
+				"session": "2021",
+				"roomNo": "sac201",
+				"createdOn": "2021-09-16 00:00:00",
+				"createdBy": null,
+				"modifiedOn": "2021-09-16 00:00:00",
+				"modifiedBy": null
+			}
+		
+	  v) Description: Can update a section by ID
+		 Endpoint: /api/Section/update/12
+		 Method: PUT
+		 ResponseBody:
+		    {
+				"sectionId": 12,
+				"sectionName": "Lilly-3",
+				"session": "2021",
+				"roomNo": "sac101",
+				"createdOn": "2021-09-16 00:00:00",
+				"createdBy": null,
+				"modifiedOn": "2021-09-16 00:00:00",
+				"modifiedBy": null
+			}
+
+	 vi) Description: delete section by a specific seciton ID
+		 Endpoint: /api/Section/update/12
+		 Method: DLETE
+		 ResponseBody:
+
+    vii) Description: Can Delete all section
+		 Endpoint: /api/Section/delete/all
+		 Method: DLETE
+		 ResponseBody:
+
+
+
+
+

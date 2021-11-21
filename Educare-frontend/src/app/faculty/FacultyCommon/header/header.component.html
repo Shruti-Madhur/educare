@@ -1,0 +1,77 @@
+<mat-toolbar style="background: rgb(255, 255, 255);">
+    <mat-toolbar-row class="justify-content-between">
+        <div fxFlex>
+            <button mat-button (click)="toggleSidebar()">
+                <mat-icon matTooltip="Menu" style="font-size: x-large;">menu</mat-icon>
+                <span *ngIf="headerTitle" style="font-size: x-large; margin-left: 20px; margin-bottom: -15px;">Educare</span>
+
+            </button>
+
+        </div>
+
+        
+        <!-- Center Elements-->
+        
+       <div fxFlex fxLayoutAlign="center center" matTooltip="Search">
+            <div class="input-group">
+                <form (ngSubmit)="searchBox()">
+                    <input type="search" class="form-control rounded" placeholder="Search" name="val"
+                        [(ngModel)]="val" />
+                </form>
+            </div>
+        </div>
+
+        
+
+
+        <!-- Right Elements-->
+
+        <div fxFlex fxLayoutAlign="flex-end center" class="top_icons">
+            <button mat-icon-button routerLink="/faculty/notice" style="margin-right: 40px;">
+                <mat-icon  mat-button matBadge="100" matBadgeColor="accent" matTooltip="Notice" style="font-size: 28px; ">list_alt</mat-icon>
+            </button>
+            <button mat-icon-button routerLink="/faculty/notification" style="margin-right: 20px;" >
+                <mat-icon matBadge="50" matBadgeColor="accent" matTooltip="Notification" style="font-size: 28px;">public</mat-icon>
+            </button>
+            
+        </div>
+
+        
+
+        <div class="row mr-2 ml-auto">
+            <ul class="row m-0 align-items-center">
+                <li >
+                    <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+                        <mat-icon  style="font-size: 32px; margin-bottom: 11px; margin-right: 15px;">account_circle</mat-icon>
+                        Ishmam Ruhan
+                        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item routerLink="/faculty/profile">
+                            <mat-icon>info</mat-icon>
+                            My Profile
+                        </button>
+                        <button mat-menu-item routerLink="/faculty/settings">
+                            <mat-icon>settings</mat-icon>
+                            Settings
+                        </button>
+                        <button mat-menu-item routerLink="/faculty/support">
+                            <mat-icon>support</mat-icon>
+                            Support
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Logout
+                        </button>
+                    </mat-menu>
+                </li>
+                
+            </ul>
+        </div>
+
+        
+         
+    </mat-toolbar-row>
+
+</mat-toolbar>
+<mat-divider></mat-divider>

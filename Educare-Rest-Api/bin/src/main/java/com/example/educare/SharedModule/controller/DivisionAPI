@@ -1,0 +1,28 @@
+@Table(name = "Division")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "Name")
+	private String Name;
+	
+	@Column(name = "Geocode")
+	private String Geocode;
+	
+	
+API: @RequestMapping("/api/division")
+
+	@PostMapping("/save-division")
+
+	@PostMapping("/save-division-list")
+	
+	@GetMapping("/get-division-list")
+
+	@GetMapping("/get-division-by-id")
+
+	@DeleteMapping("/delete-division-by-id")
+
+	@PutMapping("/update-division")
+
+	@DeleteMapping("/delete-all-division")

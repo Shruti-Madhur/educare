@@ -1,0 +1,44 @@
+.mat-raised-button{
+    height: 40px !important;
+    width: 25% !important;
+}
+
+.mat-raised-button.mat-success {
+    background-color: #4dc24d !important;
+    color: white;
+}
+
+.margin{
+    margin-top: 10px;
+}
+
+.dropzone {
+    margin-top: 17px;
+    height: 150px;
+    display: table;
+    width: 100%;
+    background-color: #eee;
+    border: dotted 1px #aaa;
+}
+
+input[type="file"]{
+  display:none;
+}
+
+.textLink{
+  background-color: #347059;
+  color:#fff;
+  padding:10px;
+  border-radius:5px;
+}
+
+.text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+.centered {
+    font-family: Roboto;
+    font-size: 1em;
+    text-align:center;
+}

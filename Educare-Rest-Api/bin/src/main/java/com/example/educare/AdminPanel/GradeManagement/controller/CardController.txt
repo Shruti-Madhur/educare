@@ -1,0 +1,77 @@
+@Table(name = "card")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@ForeignKey(name = "subject_id")
+	private int subjectId;
+	
+	@Column(name = "subject_name")
+	private String subjectName;
+	
+	@Column(name = "card_topic")
+	private String cardTopic;
+	
+	@Column(name = "card_due")
+	private Date cardDue;
+	
+	@Column(name = "card_status")
+	private String cardStatus;
+	
+	@Column(name = "card_score")
+	private int cardScore;
+	
+	@Column(name = "card_out_of")
+	private int cardOutOf;
+	
+	/*@Transient
+	private ExamType examTpye;*/
+	
+	@ForeignKey(name = "viva_exam_id")
+	private int vivaExamId;
+	
+	@ForeignKey(name = "written_exam_id")
+	private int writtenExamId;
+	
+	@ForeignKey(name = "OSPE_exam_id")
+	private int ospEaxmId;
+	
+	@ForeignKey(name = "OSCE_exam_id")
+	private int oscExamId;
+	
+	@ForeignKey(name = "faculty_id")
+	private int facultyId;
+	
+	@ForeignKey(name = "phase_id")
+	private int phaseId;
+	
+	@ForeignKey(name = "term_id")
+	private int termId;
+	
+	@ForeignKey(name = "item_id")
+	private int itemId;
+	
+	@Column(name = "created_on")
+	private Date createdOn;
+	
+	@Column(name = "created_by")
+	private String createdBy;
+
+
+
+API: @RequestMapping("/api/manage/card")
+
+	@PostMapping("/save-card")
+
+	@PostMapping("/save-card-list")
+
+	@GetMapping("/get-card-list")
+
+	@GetMapping("/get-card-by-id")
+
+	@DeleteMapping("/delete-card-by-id")
+
+	@PutMapping("/update-card")
+
+	@DeleteMapping("/delete-all-card")

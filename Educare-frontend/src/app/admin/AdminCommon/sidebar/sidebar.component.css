@@ -1,0 +1,51 @@
+.header{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .headerText{
+    padding-left: 15px;
+    font-size: 2.2rem;
+    text-decoration-style: solid;
+    font-weight: 9200;
+  }
+  
+  mat-divider{
+    margin-top: 16px;
+  }
+  
+  .card{
+    position: fixed;
+  }
+  
+  
+  
+  a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  mat-nav-list{
+    align-items:left;
+    justify-content:left;
+  }
+  
+  
+  .menuItem{
+    padding-left: 15px;
+    margin-top: 1.5px;
+  }
+  
+  .notExpension{
+    margin-left: 8px;
+    margin-top: 7px;
+  }
+  
+  
+   .mat-list-item.list-item-active {
+       background: #dce9ff ;
+  }
+   
+  

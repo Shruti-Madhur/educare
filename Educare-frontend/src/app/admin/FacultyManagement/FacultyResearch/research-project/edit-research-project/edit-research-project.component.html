@@ -1,0 +1,125 @@
+<div class="row row justify-content-center align-self-center">
+    <div style="width: 500px">
+      <h3 class="mb-5 text-center edit-research">Edit Research Paper</h3>
+  
+      <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="name">Faculty ID</label>
+            <input
+              type="text"
+              class="form-control my-2"
+              id="facultyId"
+              required
+              [(ngModel)]="research.facultyId"
+              name="facultyId"
+            />
+          </div>
+
+        <div class="form-group">
+          <label for="name">Research Project Name</label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="researchProjectName"
+            required
+            [(ngModel)]="research.researchProjectName"
+            name="researchProjectName"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">JournalName </label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="journalName"
+            required
+            [(ngModel)]="research.journalName"
+            name="journalName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">ImpactFactor </label>
+          <input
+            type="text"
+            class="form-control my-3"
+            id="impactFactor"
+            required
+            [(ngModel)]="research.impactFactor"
+            name="impactFactor"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="">CiteScore</label>
+          <input
+            class="form-control my-2"
+            id="citeScore"
+            required
+            [(ngModel)]="research.citeScore"
+            name="citeScore"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">FromDate</label>
+          <input
+            type="date"
+            class="form-control my-2"
+            id="fromDate"
+            required
+            [(ngModel)]="research.fromDate"
+            name="fromDate"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">ToDate </label>
+          <input
+            type="date"
+            class="form-control my-2"
+            id="toDate"
+            required
+            [(ngModel)]="research.toDate"
+            name="toDate"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="">Collaboration</label>
+          <input
+            class="form-control form-select my-2"
+            id="collaboration"
+            required
+            [(ngModel)]="research.collaboration"
+            name="collaboration"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">SourceOfFund </label>
+          <input
+            type="text"
+            class="form-control my-2"
+            id="sourceOfFund"
+            required
+            [(ngModel)]="research.sourceOfFund"
+            name="sourceOfFund"
+          />
+        </div>
+  
+        <button
+          type="submit"
+          class="btn btn-success btn btn-outline-dark text-white my-3"
+        >
+          <i class="fa fa-paper-plane"></i> Update
+        </button>
+      </form>
+    </div>
+  
+    
+  </div>
+  
+
+

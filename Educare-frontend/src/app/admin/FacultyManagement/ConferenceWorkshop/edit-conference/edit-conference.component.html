@@ -1,0 +1,73 @@
+<div class="row row justify-content-center align-self-center">
+  <div style="width: 500px">
+    <h3 class="mb-5 text-center edit-conference">Edit Conference Workshop</h3>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Topic</label>
+        <input
+          type="text"
+          class="form-control my-2"
+          id="topic"
+          required
+          [(ngModel)]="conference.topic"
+          name="topic"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Date </label>
+        <input
+          type="date"
+          class="form-control my-2"
+          id="date"
+          required
+          [(ngModel)]="conference.date"
+          name="date"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Organization </label>
+        <input
+          type="text"
+          class="form-control my-3"
+          id="organization"
+          required
+          [(ngModel)]="conference.organization"
+          name="organization"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="">Duration</label>
+        <input
+          type="text"
+          class="form-control my-2"
+          id="duration"
+          required
+          [(ngModel)]="conference.duration"
+          name="duration"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Venue</label>
+        <input
+          type="text"
+          class="form-control my-2"
+          id="venue"
+          required
+          [(ngModel)]="conference.venue"
+          name="venue"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-success btn btn-outline-dark text-white my-3"
+      >
+        <i class="fa fa-paper-plane"></i> Update
+      </button>
+    </form>
+  </div>
+</div>

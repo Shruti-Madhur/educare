@@ -1,0 +1,91 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 class="text-center fw-bold view-conference">Conference Workshop List</h2>
+    </div>
+    <button
+      (click)="add()"
+      class="btn btn-primary btn-outline-dark text-white my-3"
+    >
+      <i class="fa fa-plus"></i> Create
+    </button>
+    <div class="d-flex mb-3">
+      <form
+        class="form-inline d-flex md-form form-sm active-pink active-pink-2 mt-2"
+        [formGroup]="searchFormName"
+        (ngSubmit)="OnSubmitName(searchFormName.value)"
+      >
+        <b class="">Search Topic </b>
+        <input
+          class="form-control-sm mr-sm-2 mx-3"
+          type="text"
+          placeholder="Enter Topic Name"
+          id="topic"
+          formControlName="topic"
+        />
+  
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+          Search
+        </button>
+      </form>
+  
+      <form
+        class="form-inline d-flex md-form form-sm active-pink active-pink-2 mt-2"
+        [formGroup]="searchFormId"
+        (ngSubmit)="OnSubmitId(searchFormId.value)"
+      >
+        <b class="ms-4">Search by Faculty Id </b>
+        <input
+          class="form-control-sm mr-sm-2 mx-3"
+          type="text"
+          placeholder="Enter Faculty Id "
+          id="id "
+          formControlName="id"
+        />
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">
+          Search
+        </button>
+      </form>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped border-secondary">
+        <thead>
+          <tr>
+            <th>faculty Id</th>
+            <th>topic</th>
+            <th>date</th>
+            <th>organization</th>
+            <th>duration</th>
+            <th>venue</th>
+        
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let con of conference | async">
+            <td>{{ con.id }}</td>
+            <td>{{ con.topic }}</td>
+            <td>{{ con.date }}</td>
+            <td>{{ con.organization }}</td>
+            <td>{{ con.duration }}</td>
+            <td>{{ con.venue }}</td>
+            
+  
+            <td>
+              <button
+                (click)="delete(con.id)"
+                class="btn btn-outline-dark text-white btn-danger"
+              >
+                <i class="fa fa-remove"></i>
+              </button>
+              <button
+                (click)="update(con.id)"
+                class="btn btn-info btn-outline-dark text-white m-1"
+              >
+                <i class="fa fa-edit"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

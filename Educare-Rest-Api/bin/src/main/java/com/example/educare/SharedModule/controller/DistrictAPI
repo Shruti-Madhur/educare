@@ -1,0 +1,32 @@
+@Table(name = "District")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "Name")
+	private String Name;
+	
+	@Column(name = "Geocode")
+	private String Geocode;
+	
+	@ManyToOne
+	@JoinColumn(name = "DivisionId")
+	private int DivisionId;
+	
+	
+API: @RequestMapping("/api/district")
+
+	@PostMapping("/save-district")
+
+	@PostMapping("/save-district-list")
+
+	@GetMapping("/get-district-list")
+
+	@GetMapping("/get-district-by-id")
+
+	@DeleteMapping("/delete-district-by-id")
+
+	@PutMapping("/update-district")
+
+	@DeleteMapping("/delete-all-district")

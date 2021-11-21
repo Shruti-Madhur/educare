@@ -1,0 +1,136 @@
+<div class="row row justify-content-center align-self-center">
+    <div style="width: 600px" *ngIf="researchSupervision">
+      <h2 class="title text-center mb-4">Research All Details</h2>
+      
+      <div class="details my-2">
+        <label><b>facultyId: </b></label> {{ researchSupervision.facultyId }}
+      </div>
+      <div class="details my-2">
+        <label><b>projectName: </b></label> {{ researchSupervision.projectName }}
+      </div>
+      <div class="details my-2">
+        <label><b>levelOfStudy: </b></label>
+        {{ researchSupervision.levelOfStudy }}
+      </div>
+      <div class="details my-2">
+        <label><b>coSupervisor: </b></label>
+        {{ researchSupervision.coSupervisor }}
+      </div>
+      <div class="details my-2">
+        <label><b>areaOfResearch: </b></label>
+        {{ researchSupervision.areaOfResearch }}
+      </div>
+  
+      <div class="details my-2">
+        <label><b>currentCompletion: </b></label>
+        {{ researchSupervision.currentCompletion }}
+      </div>
+      <div class="details my-2">
+        <label><b>startDate: </b></label> {{ researchSupervision.startDate }}
+      </div>
+  
+      <div class="details my-2">
+        <label><b>estimatedCompletionDate: </b></label>
+        {{ researchSupervision.estimatedCompletionDate }}
+      </div>
+    </div>
+  
+    <div class="row row justify-content-center align-self-center">
+    <div style="width: 600px" *ngIf="researchInterest">
+      
+      <div class="details my-2">
+        <label><b>Field: </b></label> {{ researchInterest.field }}
+      </div>
+      <div class="details my-2">
+        <label><b>Subject: </b></label>
+        {{ researchInterest.subject }}
+      </div>
+      <div class="details my-2">
+        <label><b>Description: </b></label>
+        {{ researchInterest.description }}
+      </div>
+      
+      
+    </div>
+  
+  </div>
+  
+  <div class="row row justify-content-center align-self-center">
+    <div style="width: 600px" *ngIf="researchProject">
+      
+      <div class="details my-2">
+        <label><b>researchProjectName: </b></label> {{ researchProject.researchProjectName }}
+      </div>
+      <div class="details my-2">
+        <label><b>journalName: </b></label>
+        {{ researchProject.journalName }}
+      </div>
+      <div class="details my-2">
+        <label><b>impactFactor: </b></label>
+        {{ researchProject.impactFactor }}
+      </div>
+      <div class="details my-2">
+        <label><b>citeScore: </b></label>
+        {{ researchProject.citeScore }}
+      </div>
+      
+      <div class="details my-2">
+        <label><b>fromDate: </b></label>
+        {{ researchProject.fromDate }}
+      </div>
+      <div class="details my-2">
+        <label><b>toDate: </b></label>
+        {{ researchProject.toDate }}
+      </div>
+      <div class="details my-2">
+        <label><b>collaboration: </b></label>
+        {{ researchProject.collaboration }}
+      </div>
+      <div class="details my-2">
+        <label><b>sourceOfFund: </b></label>
+        {{ researchProject.sourceOfFund }}
+      </div>
+      
+      
+    </div>
+  
+  </div>
+  </div>
+<!-- Content Header-->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">
+
+                    All Faculty
+
+                </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+
+
+                    <!-- ** Breadcrumb items should added here **  -->
+                    <li class="breadcrumb-item"><a routerLink="/admin/dashboard">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a routerLink="/admin/fac-manage/add-faculty">Add Faculty</a></li>
+                    <li class="breadcrumb-item">All faculty</li>
+                   
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content-header -->
+
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+
+        <!--  ** Main Contain of this Page goes here ** -->
+        <p>All faculty goes here</p>
+
+    </div>
+</div>
+<!--Main content -->

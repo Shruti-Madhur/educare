@@ -1,0 +1,76 @@
+@Table(name = "term")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@ForeignKey(name = "subject_id")
+	private int subjectId;
+	
+	@Column(name = "subject_name")
+	private String subjectName;
+	
+	@Column(name = "term_topic")
+	private String termTopic;
+	
+	@Column(name = "term_due")
+	private Date termDue;
+	
+	@Column(name = "term_status")
+	private String termStatus;
+	
+	@Column(name = "term_score")
+	private int termScore;
+	
+	@Column(name = "term_out_of")
+	private int termOutOf;
+	
+	/*@Transient
+	private ExamType examTpye;*/
+	
+	@ForeignKey(name = "viva_exam_id")
+	private int vivaExamId;
+	
+	@ForeignKey(name = "written_exam_id")
+	private int writtenExamId;
+	
+	@ForeignKey(name = "OSPE_exam_id")
+	private int ospEaxmId;
+	
+	@ForeignKey(name = "OSCE_exam_id")
+	private int oscExamId;
+	
+	@ForeignKey(name = "faculty_id")
+	private int facultyId;
+	
+	@ForeignKey(name = "phase_id")
+	private int phaseId;
+	
+	@ForeignKey(name = "card_id")
+	private int cardId;
+	
+	@ForeignKey(name = "prof_id")
+	private int profId;
+	
+	@Column(name = "created_on")
+	private Date createdOn;
+	
+	@Column(name = "created_by")
+	private String createdBy;
+	
+	
+API: @RequestMapping("/api/manage/term")
+
+	@PostMapping("/save-term")
+
+	@PostMapping("/save-term-list")
+
+	@GetMapping("/get-term-list")
+
+	@GetMapping("/get-term-by-id")
+
+	@DeleteMapping("/delete-term-by-id")
+
+	@PutMapping("/update-term")
+
+	@DeleteMapping("/delete-all-term")

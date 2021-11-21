@@ -1,0 +1,57 @@
+@Table(name = "Address")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int Id;
+	
+	@Column(name = "Street")
+	private String Street;
+	
+	@Column(name = "PostOffice")
+	private String PostOffice;
+	
+	@Column(name = "PostalCode)")
+	private String PostalCode;
+	
+	@OneToOne
+	@JoinColumn(name = "DivisionId")
+	private int DivisionId;
+	
+	@OneToOne
+	@JoinColumn(name = "DistrictId")
+	private int DistrictId;
+	
+	@OneToOne
+	@JoinColumn(name = "UpazilaId")
+	private int UpazilaId;
+	
+	//Will be auto generated
+	@Column(name = "CreatedOn")
+	private Date CreatedOn;
+
+	@Column(name = "CreatedBy")
+	private String CreatedBy;
+	
+	//Will be auto generated
+	@Column(name = "ModifiedOn")
+	private Date ModifiedOn;
+	
+	@Column(name = "ModifiedBy")
+	private String ModifiedBy;
+	
+
+API: @RequestMapping("/api/address")
+
+	@PostMapping("/save-address")
+
+	@PostMapping("/save-address-list")
+
+	@GetMapping("/get-address-list")
+
+	@GetMapping("/get-address-by-id")
+
+	@DeleteMapping("/delete-address-by-id")
+
+	@PutMapping("/update-address")
+
+	@DeleteMapping("/delete-all-address")

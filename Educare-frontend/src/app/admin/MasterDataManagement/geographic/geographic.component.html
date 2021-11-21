@@ -1,0 +1,98 @@
+<!-- Content Header-->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">
+
+                    Geographic Management
+
+                </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+
+                    <li class="breadcrumb-item"><a routerLink="/admin/dashboard">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Geographic</li>
+
+
+                </ol>
+            </div> 
+        </div>
+    </div>
+</div>
+<!--content-header -->
+
+<!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+
+        <!--
+        //////////////////////////////
+        //////////////////////////////
+            Main Content Goes Here
+        //////////////////////////////
+        //////////////////////////////
+        -->
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm d-flex justify-content-start">
+                    <mat-form-field>
+                        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm d-flex justify-content-end">
+                    <button (click)="openDialog()" mat-raised-button color="success">
+                        <mat-icon>save_alt</mat-icon>
+                        Import
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        
+        
+        <div class="example-container mat-elevation-z0">
+        
+            <mat-table class="mat-elevation-z0" [dataSource]="dataSource" matSort flex layout="row" layout-fill>
+        
+                <!-- ID Column -->
+                <ng-container matColumnDef="serial">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> <b>#</b> </mat-header-cell>
+                    <mat-cell *matCellDef="let row; let i = index" > {{row.serial}} </mat-cell>
+                </ng-container>
+        
+                <!-- Progress Column -->
+                <ng-container matColumnDef="upazilla">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Upazilla</b> </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.upazilla}}</mat-cell>
+                </ng-container>
+        
+                <!-- Name Column -->
+                <ng-container matColumnDef="district">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> <b>District</b> </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.district}} </mat-cell>
+                </ng-container>
+        
+                <!-- Color Column -->
+                <ng-container matColumnDef="division">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Division</b> </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.division}} </mat-cell>
+                </ng-container>
+        
+                <thead>
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns; " ></mat-row>
+                </thead>
+            </mat-table>
+        
+            <mat-paginator [pageSizeOptions]="[6, 15, 50, 100]"></mat-paginator>
+        </div>
+        
+    </div>
+</div>
+<!--Main content -->

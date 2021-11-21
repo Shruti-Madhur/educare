@@ -1,0 +1,73 @@
+@Table(name = "item")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@ForeignKey(name = "subject_id")
+	private int subjectId;
+	
+	@Column(name = "subject_name")
+	private String subjectName;
+	
+	@Column(name = "item_topic")
+	private String itemTopic;
+	
+	@Column(name = "item_due")
+	private Date itemDue;
+	
+	@Column(name = "item_status")
+	private String itemStatus;
+	
+	@Column(name = "item_score")
+	private int itemScore;
+	
+	@Column(name = "item_out_of")
+	private int itemOutOf;
+	
+	/*@Transient
+	private ExamType examTpye;*/
+	
+	@ForeignKey(name = "viva_exam_id")
+	private int vivaExamId;
+	
+	@ForeignKey(name = "written_exam_id")
+	private int writtenExamId;
+	
+	@ForeignKey(name = "OSPE_exam_id")
+	private int ospEaxmId;
+	
+	@ForeignKey(name = "OSCE_exam_id")
+	private int oscExamId;
+	
+	@ForeignKey(name = "faculty_id")
+	private int facultyId;
+	
+	@ForeignKey(name = "phase_id")
+	private int phaseId;
+	
+	@ForeignKey(name = "card_id")
+	private int cardId;
+	
+	@Column(name = "created_on")
+	private Date createdOn;
+	
+	@Column(name = "created_by")
+	private String createdBy;
+	
+
+API: @RequestMapping("/api/manage/item")
+
+	@PostMapping("/save-item")
+
+	@PostMapping("/save-item-list")
+
+	@GetMapping("/get-item-list")
+
+	@GetMapping("/get-item-by-id")
+
+	@DeleteMapping("/delete-item-by-id")
+
+	@PutMapping("/update-item")
+
+	@DeleteMapping("/delete-all-item")

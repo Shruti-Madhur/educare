@@ -1,0 +1,74 @@
+@Table(name = "prof")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@ForeignKey(name = "subject_id")
+	private int subjectId;
+	
+	@Column(name = "subject_name")
+	private String subjectName;
+	
+	@Column(name = "prof_topic")
+	private String profTopic;
+	
+	@Column(name = "prof_due")
+	private Date profDue;
+	
+	@Column(name = "prof_status")
+	private String profStatus;
+	
+	@Column(name = "prof_score")
+	private int profScore;
+	
+	@Column(name = "prof_out_of")
+	private int profOutOf;
+	
+	/*@Transient
+	private ExamType examTpye;*/
+	
+	@ForeignKey(name = "viva_exam_id")
+	private int vivaExamId;
+	
+	@ForeignKey(name = "written_exam_id")
+	private int writtenExamId;
+	
+	@ForeignKey(name = "OSPE_exam_id")
+	private int ospEaxmId;
+	
+	@ForeignKey(name = "OSCE_exam_id")
+	private int oscExamId;
+	
+	@ForeignKey(name = "faculty_id")
+	private int facultyId;
+	
+	@ForeignKey(name = "phase_id")
+	private int phaseId;
+	
+	@ForeignKey(name = "term_id")
+	private int termId;
+	
+	@Column(name = "created_on")
+	private Date createdOn;
+	
+	@Column(name = "created_by")
+	private String createdBy;
+	
+	
+
+API: @RequestMapping("/api/manage/prof")
+
+	@PostMapping("/save-prof")
+
+	@PostMapping("/save-prof-list")
+
+	@GetMapping("/get-prof-list")
+
+	@GetMapping("/get-prof-by-id")
+
+	@DeleteMapping("/delete-prof-by-id")
+
+	@PutMapping("/update-prof")
+
+	@DeleteMapping("/delete-all-prof")
